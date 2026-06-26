@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/sitemap.xml
