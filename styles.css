@@ -271,7 +271,7 @@ h1{
 .row-title .muted{max-width:390px}
 .muted{color:var(--muted);margin:0}
 
-.expertise-grid,.project-grid{
+.expertise-grid,.project-grid,.tools-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
@@ -281,18 +281,18 @@ h1{
   grid-template-columns:repeat(4,1fr);
   gap:16px;
 }
-.feature-card,.skill-card,.timeline,.project-card,.contact-panel,.publication-list article,.software-panel,.publication-detail{
+.feature-card,.skill-card,.timeline,.project-card,.tool-card,.contact-panel,.publication-list article,.software-panel,.publication-detail{
   border:1px solid rgba(255,255,255,.10);
   background:linear-gradient(180deg,rgba(21,27,32,.94),rgba(13,17,21,.96));
   box-shadow:0 14px 44px rgba(0,0,0,.22);
 }
-.feature-card,.skill-card,.project-card,.publication-list article{
+.feature-card,.skill-card,.project-card,.tool-card,.publication-list article{
   border-radius:var(--radius);
   padding:22px;
   min-height:230px;
   transition:.22s ease;
 }
-.feature-card:hover,.skill-card:hover,.project-card:hover{
+.feature-card:hover,.skill-card:hover,.project-card:hover,.tool-card:hover{
   transform:translateY(-3px);
   border-color:rgba(66,199,183,.45);
 }
@@ -307,10 +307,10 @@ h1{
   font-weight:800;
   margin-bottom:18px;
 }
-.feature-card h3,.skill-card h3,.project-card h3,.timeline-content h3,.publication-list h3{
+.feature-card h3,.skill-card h3,.project-card h3,.tool-card h3,.timeline-content h3,.publication-list h3{
   font-size:1.12rem;
 }
-.feature-card p,.skill-card p,.project-card p,.publication-list p{
+.feature-card p,.skill-card p,.project-card p,.tool-card p,.publication-list p{
   color:#c8d2cf;
   margin:14px 0 0;
 }
@@ -400,6 +400,14 @@ h1{
   font-weight:750;
 }
 
+
+.tool-card{
+  min-height:220px;
+}
+.tool-card h3{
+  overflow-wrap:anywhere;
+}
+
 .project-card{min-height:245px}
 .project-top{
   display:flex;
@@ -476,7 +484,7 @@ footer{
     border:1px solid var(--border);
   }
   .hero-grid,.about-layout,.education-layout,.contact-panel,.software-panel{grid-template-columns:1fr}
-  .expertise-grid,.project-grid,.publication-list{grid-template-columns:repeat(2,1fr)}
+  .expertise-grid,.project-grid,.tools-grid,.publication-list{grid-template-columns:repeat(2,1fr)}
   .timeline-item{grid-template-columns:1fr}
   .timeline-date{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
   .timeline-content:before{display:none}
@@ -488,9 +496,9 @@ footer{
   h1{font-size:3rem;line-height:1.02}
   .headline{font-size:1.12rem}
   .hero-summary{font-size:1rem}
-  .expertise-grid,.skill-grid,.detail-skill-grid,.project-grid,.publication-list,.profile-stats{grid-template-columns:1fr}
+  .expertise-grid,.skill-grid,.detail-skill-grid,.project-grid,.tools-grid,.publication-list,.profile-stats{grid-template-columns:1fr}
   .photo-frame{min-height:360px}
-  .feature-card,.skill-card,.project-card,.publication-list article,.contact-panel,.software-panel,.publication-detail{padding:20px}
+  .feature-card,.skill-card,.project-card,.tool-card,.publication-list article,.contact-panel,.software-panel,.publication-detail{padding:20px}
   .timeline-date,.timeline-content{padding:22px}
   .about-layout h2,.section-title h2,.contact-panel h2,.education-layout h2{font-size:2rem}
   .btn{width:100%}
