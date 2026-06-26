@@ -68,10 +68,10 @@ li{margin:.55rem 0;color:#d8dfdc;line-height:1.62}
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:22px;
+  gap:16px;
   margin-inline:auto;
   color:#dce5e2;
-  font-size:.9rem;
+  font-size:.84rem;
 }
 
 .site-nav a{
@@ -281,7 +281,7 @@ h1{
   grid-template-columns:repeat(4,1fr);
   gap:16px;
 }
-.feature-card,.skill-card,.timeline,.project-card,.contact-panel,.publication-list article{
+.feature-card,.skill-card,.timeline,.project-card,.contact-panel,.publication-list article,.software-panel,.publication-detail{
   border:1px solid rgba(255,255,255,.10);
   background:linear-gradient(180deg,rgba(21,27,32,.94),rgba(13,17,21,.96));
   box-shadow:0 14px 44px rgba(0,0,0,.22);
@@ -315,6 +315,39 @@ h1{
   margin:14px 0 0;
 }
 
+
+.detail-skill-grid{
+  grid-template-columns:repeat(5,1fr);
+}
+.software-panel{
+  border-radius:var(--radius);
+  padding:24px;
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:24px;
+  margin-top:18px;
+}
+.software-panel h3{
+  font-size:1.12rem;
+  margin:0;
+}
+.software-panel p{
+  color:#c8d2cf;
+  margin:12px 0 0;
+}
+.publication-detail{
+  border-radius:var(--radius);
+  padding:28px;
+}
+.publication-detail ul{
+  columns:2;
+  column-gap:36px;
+  padding-left:1.2rem;
+}
+.publication-detail li{
+  break-inside:avoid;
+  margin:0 0 .85rem;
+}
 .tool-strip{
   display:flex;
   flex-wrap:wrap;
@@ -425,7 +458,7 @@ footer{
   .site-header{padding:0 4vw;gap:16px}
   .site-nav{gap:14px;font-size:.84rem}
   h1{font-size:4.1rem}
-  .skill-grid{grid-template-columns:repeat(2,1fr)}
+  .skill-grid,.detail-skill-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 @media (max-width: 920px){
@@ -442,7 +475,7 @@ footer{
     background:#101418;
     border:1px solid var(--border);
   }
-  .hero-grid,.about-layout,.education-layout,.contact-panel{grid-template-columns:1fr}
+  .hero-grid,.about-layout,.education-layout,.contact-panel,.software-panel{grid-template-columns:1fr}
   .expertise-grid,.project-grid,.publication-list{grid-template-columns:repeat(2,1fr)}
   .timeline-item{grid-template-columns:1fr}
   .timeline-date{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -455,11 +488,12 @@ footer{
   h1{font-size:3rem;line-height:1.02}
   .headline{font-size:1.12rem}
   .hero-summary{font-size:1rem}
-  .expertise-grid,.skill-grid,.project-grid,.publication-list,.profile-stats{grid-template-columns:1fr}
+  .expertise-grid,.skill-grid,.detail-skill-grid,.project-grid,.publication-list,.profile-stats{grid-template-columns:1fr}
   .photo-frame{min-height:360px}
-  .feature-card,.skill-card,.project-card,.publication-list article,.contact-panel{padding:20px}
+  .feature-card,.skill-card,.project-card,.publication-list article,.contact-panel,.software-panel,.publication-detail{padding:20px}
   .timeline-date,.timeline-content{padding:22px}
   .about-layout h2,.section-title h2,.contact-panel h2,.education-layout h2{font-size:2rem}
   .btn{width:100%}
   .quick-info{display:grid}
+  .publication-detail ul{columns:1}
 }
