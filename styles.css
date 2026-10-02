@@ -243,7 +243,10 @@ h1{
 .photo-frame{
   border-radius:var(--radius);
   overflow:hidden;
-  min-height:450px;
+  /* the frame drives its own height from its width, so it can never
+     out-grow the portrait and leave dead space above it */
+  aspect-ratio:4/5;
+  min-height:0;
   display:flex;
   align-items:flex-end;
   justify-content:center;
@@ -604,7 +607,8 @@ footer{
   .headline{font-size:1.12rem}
   .hero-summary{font-size:1rem}
   .expertise-grid,.skill-grid,.detail-skill-grid,.project-grid,.detailed-projects,.tools-grid,.service-grid,.featured-grid,.publication-list,.profile-stats{grid-template-columns:1fr}
-  .photo-frame{min-height:360px}
+  /* square frame on phones keeps the card compact; aspect-ratio still rules out dead space */
+  .photo-frame{aspect-ratio:1/1}
   .feature-card,.skill-card,.project-card,.tool-card,.service-card,.featured-card,.publication-list article,.contact-panel,.software-panel,.publication-detail{padding:20px}
   .timeline-date,.timeline-content{padding:22px}
   .about-layout h2,.section-title h2,.contact-panel h2,.education-layout h2{font-size:2rem}
@@ -698,7 +702,7 @@ footer{
   }
 
   .hero-card{border:1px solid #c9c9c9 !important;background:#fff !important}
-  .photo-frame{min-height:0;max-width:45mm;margin:0 auto}
+  .photo-frame{min-height:0;aspect-ratio:auto;max-width:45mm;margin:0 auto}
   .photo-frame img{max-height:55mm;height:auto;object-fit:contain}
   .profile-stats div{background:#fff;border:1px solid #c9c9c9}
   .profile-stats strong{color:#111}
