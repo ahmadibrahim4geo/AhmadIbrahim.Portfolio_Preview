@@ -591,6 +591,9 @@ footer{
     border:1px solid var(--border);
   }
   .hero-grid,.about-layout,.education-layout,.contact-panel,.software-panel{grid-template-columns:1fr}
+  /* single-column hero would stretch the card, and with it the 4:5 portrait,
+     to roughly 820px tall: cap it so the portrait stays portrait-sized */
+  .hero-card{max-width:min(100%, 420px);margin-inline:auto}
   .expertise-grid,.project-grid,.tools-grid,.service-grid,.featured-grid,.publication-list{grid-template-columns:repeat(2,1fr)}
   .timeline-item{grid-template-columns:1fr}
   .timeline-date{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
