@@ -25,11 +25,11 @@
       <span class="brand-text">Ahmad Ibrahim</span>
     </a>
 
-    <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="site-nav" aria-label="Primary navigation">
+    <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
@@ -376,25 +376,76 @@
           <p class="muted">Available for infrastructure GIS deliverables, InfraWizard network preparation, CAD-to-GIS workflows, stormwater and groundwater network support, scientific maps, and custom workflow tools.</p>
         </div>
         <div class="contact-links">
-          <a class="contact-primary" href="https://wa.me/201111915925">Contact on WhatsApp</a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ahmadibrahim.geo@gmail.com&amp;su=Portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Send Email</a>
-          <a href="https://linkedin.com/in/ahmadibrahim4geo">LinkedIn</a>
-          <a href="https://github.com/ahmadibrahim4geo">GitHub</a>
+          <a class="contact-primary" href="https://wa.me/201111915925">Contact on WhatsApp<span class="print-only">— https://wa.me/201111915925</span></a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ahmadibrahim.geo@gmail.com&amp;su=Portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Send Email<span class="print-only">— ahmadibrahim.geo@gmail.com</span></a>
+          <a href="https://linkedin.com/in/ahmadibrahim4geo">LinkedIn<span class="print-only">— https://linkedin.com/in/ahmadibrahim4geo</span></a>
+          <a href="https://github.com/ahmadibrahim4geo">GitHub<span class="print-only">— https://github.com/ahmadibrahim4geo</span></a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>(c) 2026 Ahmad Ibrahim. Infrastructure GIS & Stormwater Network Specialist.</p>
+    <p>&copy; 2026 Ahmad Ibrahim. Infrastructure GIS &amp; Stormwater Network Specialist.</p>
   </footer>
 
   <script>
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      anchor.addEventListener('click', function() {
-        document.body.classList.remove('nav-open');
+    (function () {
+      var body = document.body;
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('primary-nav');
+
+      function isOpen() {
+        return body.classList.contains('nav-open');
+      }
+
+      function setOpen(state) {
+        body.classList.toggle('nav-open', state);
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
+          toggle.setAttribute('aria-label', state ? 'Close navigation menu' : 'Open navigation menu');
+        }
+      }
+
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          setOpen(!isOpen());
+        });
+      }
+
+      /* close the mobile menu after choosing a destination */
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function () {
+          if (isOpen()) setOpen(false);
+        });
       });
-    });
+
+      /* Escape closes the menu and returns focus to the button */
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && isOpen()) {
+          setOpen(false);
+          if (toggle) toggle.focus();
+        }
+      });
+
+      /* so does a click outside the panel */
+      document.addEventListener('click', function (event) {
+        if (!isOpen()) return;
+        if (nav && nav.contains(event.target)) return;
+        if (toggle && toggle.contains(event.target)) return;
+        setOpen(false);
+      });
+
+      /* the menu only exists in the mobile layout; drop the state when leaving it */
+      if (window.matchMedia) {
+        var wide = window.matchMedia('(min-width: 921px)');
+        var onChange = function (event) {
+          if (event.matches) setOpen(false);
+        };
+        if (wide.addEventListener) wide.addEventListener('change', onChange);
+        else if (wide.addListener) wide.addListener(onChange);
+      }
+    })();
   </script>
 </body>
 </html>
