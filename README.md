@@ -1,14 +1,80 @@
-# Ahmad Ibrahim Portfolio Preview
+# Ahmad Ibrahim | Portfolio & CV Preview
+### ملف الأعمال والسيرة الذاتية التفاعلية للمهندس/ أحمد إبراهيم طلبة خضر
 
-This is a static website preview for Ahmad Ibrahim's online CV / professional portfolio.
+> **Infrastructure GIS & Stormwater Network Specialist | GOPP Certified Expert Assistant**  
+> **أخصائي نظم المعلومات الجغرافية للبنية التحتية وشبكات تصريف مياه الأمطار والسيول | مساعد خبير معتمد بالهيئة العامة للتخطيط العمراني (GOPP)**
 
-## How to preview
-Open `index.html` in any browser.
+---
 
-## Structure
-- `index.html` — website layout
-- `styles.css` — dark modern UI styling
-- `assets/ahmad-ibrahim.png` — profile photo
+## 🌟 Overview / نبذة عن المشروع
 
-## Notes
-This is a front-end preview only. It can later be converted into a full GitHub Pages project.
+A modern, high-performance, bilingual (English & Arabic) portfolio and interactive CV website showcasing the engineering achievements, publications, and software tools of **Ahmad Ibrahim**.
+
+موقع ويب تفاعلي حديث وفائق السرعة ثنائي اللغة (عربي / إنجليزي)، مصمم ليعكس الهوية المهنية والتخصص الهندسي الدقيق للأخصائي **أحمد إبراهيم** في مجالات نظم المعلومات الجغرافية للبنية التحتية، ونمذجة شبكات تصريف مياه الأمطار والسيول، وخفض منسوب المياه الجوفية والنزح السطحي، وتطوير أدوات الأتمتة البرمجية.
+
+---
+
+## 🏆 Key Highlights & Credentials / أبرز المؤهلات والإنجازات
+
+- **Certified GOPP Expert Assistant**: Registered with the General Organization for Physical Planning (GOPP), Ministry of Housing, Egypt.  
+  *(مساعد خبير معتمد في التخطيط ونظم المعلومات الجغرافية بالهيئة العامة للتخطيط العمراني - مصر)*
+- **Author of 6 Registered Atlases**: Formally registered with the National Library and Archives of Egypt with official local deposit numbers and ISBN.  
+  *(مؤلف 6 أطالس جغرافية معتمدة ومسجلة رسمياً بدار الكتب والوثائق القومية المصرية برقم إيداع وترقيم دولي ISBN)*
+- **Jeddah & Riyadh Mega-Projects**: Key contributor to emergency stormwater solutions, alternative drainage routes, dewatering networks (Alruwais, Alhamraa, Alkhalidiah), and flood protection for Wadi Laban.  
+  *(خبرة تنفيذية في مشاريع تصريف مياه الأمطار وخفض المياه الجوفية بأمانة محافظة جدة، وحماية وادي لبن بالرياض من أخطار السيول)*
+- **Custom Workflow Automation Tools (2026)**: Creator of 9 practical engineering utilities (SmartGully, Text-to-Shapefile Toolbox v1.8, Smart Plot PDF, RoboTransfer, Qtra Pipe Auto Run, etc.).  
+  *(مبتكر ومطور 9 أدوات برمجية وحزم أتمتة هندسية لتسريع وتسهيل سير العمل بين CAD و GIS)*
+- **Software Ecosystem Interoperability**: Deep mastery bridging Bentley SewerGEMS & StormCAD (FlexTables) $\rightarrow$ Autodesk InfraWizard, Civil 3D & AutoCAD (Profiles, Invert Levels) $\rightarrow$ Esri ArcGIS Pro, ArcMap & QGIS.
+
+---
+
+## 📁 Repository Structure / هيكل المشروع
+
+```text
+├── index.html         # Main bilingual webpage layout & embedded real-time I18N dictionary
+├── styles.css         # Modern dark engineering design system, responsive grids & RTL styling
+├── robots.txt         # Search engine crawler instructions
+├── sitemap.xml        # Sitemap for search indexation
+└── assets/
+    ├── ahmad-ibrahim.png                       # High-resolution profile portrait
+    ├── Ahmad_Ibrahim_CV_Final_Improved.pdf     # Official downloadable PDF curriculum vitae
+    ├── Ahmad_Ibrahim_CV_Final_Improved.docx    # Word document reference format
+    └── favicon.svg                             # Custom vector monogram favicon
+```
+
+---
+
+## 🌐 Languages & RTL Support / اللغات ودعم اللغة العربية
+
+- **Instant Language Toggle**: Seamless switching between **English (EN)** and **Arabic (العربية)** without page reloads.
+- **Direction Flip**: Automatically flips layout to **RTL** for Arabic, activating the **Cairo** typography and tailored text balance.
+- **Persistent State**: The user's language choice is saved in `localStorage` and applied immediately before first paint to eliminate layout shifts or direction flashing.
+
+---
+
+## 🖨️ Clean Print / Save to PDF / الطباعة وتصدير السيرة الذاتية
+
+The stylesheet includes a dedicated `@media print` engine formatted for **Standard A4**:
+- Strips interactive headers, buttons, and decorative backgrounds.
+- Flattens into a clean, crisp, black-and-white executive engineering CV ready for printing or direct PDF export from any browser (`Ctrl + P`).
+
+---
+
+## 🚀 How to Run & Preview / طريقة المعاينة والتشغيل
+
+Simply open `index.html` in any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, Safari), or deploy directly to **GitHub Pages**.
+
+```powershell
+# Open directly on Windows
+Start-Process index.html
+```
+
+---
+
+## 📬 Contact & Inquiries / التواصل والاستشارات
+
+- **WhatsApp**: [+20 111 191 5925](https://wa.me/201111915925)
+- **Email**: [ahmadibrahim.geo@gmail.com](mailto:ahmadibrahim.geo@gmail.com)
+- **LinkedIn**: [linkedin.com/in/ahmadibrahim4geo](https://linkedin.com/in/ahmadibrahim4geo)
+- **GitHub**: [github.com/ahmadibrahim4geo](https://github.com/ahmadibrahim4geo)
+- **Phone**: +20 111 191 5925 / +20 107 061 9064

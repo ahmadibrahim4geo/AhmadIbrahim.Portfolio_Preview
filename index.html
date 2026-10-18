@@ -13,387 +13,1115 @@
   <meta property="og:url" content="https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/" />
   <meta property="og:image" content="https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/assets/ahmad-ibrahim.png" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts: Cairo for Arabic & Plus Jakarta Sans for English -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    /* Apply saved language before paint to avoid flash of wrong direction */
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-lang');
+        var lang = saved === 'ar' ? 'ar' : 'en';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      } catch (e) {}
+    })();
+  </script>
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Ahmad Ibrahim","alternateName":"Ahmad Ibrahim Tolba Khedr","jobTitle":"Infrastructure GIS and Stormwater Network Specialist","email":"mailto:ahmadibrahim.geo@gmail.com","telephone":"+201111915925","address":{"@type":"PostalAddress","addressLocality":"Giza","addressCountry":"Egypt"},"url":"https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/","sameAs":["https://linkedin.com/in/ahmadibrahim4geo","https://github.com/ahmadibrahim4geo"],"knowsAbout":["GIS","InfraWizard","Stormwater networks","CAD-to-GIS","ArcGIS","Civil 3D","SewerGEMS","StormCAD"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmad Ibrahim",
+    "alternateName": "Ahmad Ibrahim Tolba Khedr",
+    "jobTitle": "Infrastructure GIS and Stormwater Network Specialist",
+    "email": "mailto:ahmadibrahim.geo@gmail.com",
+    "telephone": "+201111915925",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Giza",
+      "addressCountry": "Egypt"
+    },
+    "url": "https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/",
+    "sameAs": [
+      "https://linkedin.com/in/ahmadibrahim4geo",
+      "https://github.com/ahmadibrahim4geo"
+    ],
+    "knowsAbout": [
+      "GIS",
+      "InfraWizard",
+      "Stormwater networks",
+      "CAD-to-GIS",
+      "ArcGIS",
+      "Civil 3D",
+      "SewerGEMS",
+      "StormCAD"
+    ]
+  }
   </script>
 </head>
 <body>
+  <!-- ==================== HEADER ==================== -->
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Ahmad Ibrahim home">
+    <a class="brand" href="#home" aria-label="Ahmad Ibrahim home" data-i18n-aria-label="aria.brand">
       <span class="brand-mark">AI</span>
-      <span class="brand-text">Ahmad Ibrahim</span>
+      <div class="brand-info">
+        <span class="brand-name" data-i18n="brand.name">Ahmad Ibrahim</span>
+        <span class="brand-role" data-i18n="brand.role">Infrastructure GIS Specialist</span>
+      </div>
     </a>
 
-    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#tools-2026">Tools</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary navigation" data-i18n-aria-label="aria.nav">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#tools-2026" data-i18n="nav.tools">Tools 2026</a>
+      <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#publications" data-i18n="nav.publications">Publications</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
-    <a class="header-btn" href="assets/Ahmad_Ibrahim_CV_Final_Improved.docx">Download CV</a>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language selection" data-i18n-aria-label="aria.lang">
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="true" title="English">EN</button>
+        <button class="lang-btn" type="button" data-lang="ar" aria-pressed="false" title="العربية" lang="ar">ع</button>
+      </div>
+
+      <a class="header-btn" href="assets/Ahmad_Ibrahim_CV_Final_Improved.pdf" download="Ahmad_Ibrahim_CV.pdf" type="application/pdf">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-i18n="cta.downloadCv">Download CV</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main id="home">
-<section class="hero section">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero section">
       <div class="hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">Infrastructure GIS Portfolio</p>
-          <h1>Ahmad Ibrahim</h1>
-          <p class="headline">Infrastructure GIS & Stormwater Network Specialist</p>
+          <div class="status-beacon">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero.beacon">Available for Infrastructure GIS & Engineering Consultancy</span>
+          </div>
 
-          <p class="hero-summary">
-            I help engineering teams prepare GIS/CAD stormwater and groundwater network deliverables using InfraWizard, ArcGIS, Civil 3D, SewerGEMS/StormCAD outputs, and automated workflow tools.
+          <h1 data-i18n="hero.name">Ahmad Ibrahim</h1>
+          <p class="headline" data-i18n="hero.headline">Infrastructure GIS, Stormwater &amp; Flood Networks, and Groundwater Dewatering Specialist</p>
+
+          <p class="hero-summary" data-i18n="hero.summary">
+            Bridging the gap between academic cartography and large-scale infrastructure engineering in Egypt and Saudi Arabia. I specialize in integrating hydraulic modeling outputs (SewerGEMS / StormCAD), civil drafting workflows (InfraWizard / Civil 3D / AutoCAD), and GIS geodatabases, while authoring custom automation tools to eliminate manual bottlenecks and deliver audit-ready engineering packages.
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn ghost" href="assets/Ahmad_Ibrahim_CV_Final_Improved.docx">Download CV</a>
-            <a class="btn ghost" href="https://wa.me/201111915925">Contact on WhatsApp</a>
+            <a class="btn primary" href="#projects">
+              <span data-i18n="hero.viewProjects">Explore Projects</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a class="btn ghost" href="assets/Ahmad_Ibrahim_CV_Final_Improved.pdf" download="Ahmad_Ibrahim_CV.pdf" type="application/pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span data-i18n="hero.downloadCv">Download CV (PDF)</span>
+            </a>
+            <a class="btn whatsapp" href="https://wa.me/201111915925" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+              <span data-i18n="hero.whatsapp">WhatsApp Chat</span>
+            </a>
           </div>
 
-          <div class="quick-info" aria-label="Quick profile facts">
-            <span>Based in Giza, Egypt</span>
-            <span>5+ years infrastructure GIS</span>
-            <span>Egypt and Saudi Arabia projects</span>
+          <div class="quick-info" aria-label="Quick profile facts" data-i18n-aria-label="aria.quick">
+            <span data-i18n="quick.1">Based in Giza, Egypt (Available Regionally)</span>
+            <span data-i18n="quick.2">5+ Years in Infrastructure GIS</span>
+            <span data-i18n="quick.3">Egypt and Saudi Arabia Projects</span>
+            <span data-i18n="quick.4">Certified GOPP Expert Assistant</span>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Profile highlights">
+        <aside class="hero-card" aria-label="Profile highlights" data-i18n-aria-label="aria.heroCard">
           <div class="photo-frame">
             <img src="assets/ahmad-ibrahim.png" alt="Ahmad Ibrahim portrait" />
+            <div class="photo-badge" data-i18n="badge.gopp">GOPP Expert Assistant</div>
           </div>
           <div class="profile-stats">
-            <div><strong>5+</strong><span>Years Experience</span></div>
-            <div><strong>GOPP</strong><span>Expert Assistant</span></div>
-            <div><strong>2026</strong><span>Custom Tools</span></div>
+            <div>
+              <strong>5+</strong>
+              <span data-i18n="stat.years">Years Experience</span>
+            </div>
+            <div>
+              <strong>6</strong>
+              <span data-i18n="stat.atlases">Authored Atlases</span>
+            </div>
+            <div>
+              <strong>2026</strong>
+              <span data-i18n="stat.tools">Custom Tools</span>
+            </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="about" class="section about-layout">
-      <div>
-        <p class="section-label">Professional Summary</p>
-        <h2>Infrastructure GIS, stormwater networks, groundwater reduction, and engineering mapping deliverables.</h2>
+    <!-- ==================== METRICS SHOWCASE BAR ==================== -->
+    <section class="section metrics-bar">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="metric-body">
+            <strong data-i18n="metric.1.val">5+ Years</strong>
+            <h4 data-i18n="metric.1.title">Infrastructure & GIS</h4>
+            <p data-i18n="metric.1.desc">Specialized in stormwater drainage, flood mitigation, and groundwater dewatering networks.</p>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="metric-body">
+            <strong data-i18n="metric.2.val">6 Atlases</strong>
+            <h4 data-i18n="metric.2.title">Registered Publications</h4>
+            <p data-i18n="metric.2.desc">Registered with the National Library and Archives of Egypt with official deposit numbers & ISBN.</p>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          </div>
+          <div class="metric-body">
+            <strong data-i18n="metric.3.val">11+ Plans</strong>
+            <h4 data-i18n="metric.3.title">Jeddah Municipality</h4>
+            <p data-i18n="metric.3.desc">Stormwater networks, urgent emergency drainage, and alternative routes for major planning zones.</p>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="metric-body">
+            <strong data-i18n="metric.4.val">9 Utilities</strong>
+            <h4 data-i18n="metric.4.title">Custom Tools (2026)</h4>
+            <p data-i18n="metric.4.desc">Bespoke engineering utilities developed to automate data transfers, plotting, and network conversion.</p>
+          </div>
+        </div>
       </div>
-      <p>
-        Experienced in building drainage and groundwater networks from survey data, SewerGEMS/StormCAD outputs,
-        CAD drawings, and GIS datasets, with deliverables including PDF layouts, CAD drawings, GIS geodatabases,
-        shapefiles, KML files, profiles, summaries, and surface/DEM outputs. Registered as a GOPP Expert Assistant,
-        with practical project experience in Egypt and Saudi Arabia, especially Jeddah stormwater, groundwater control,
-        urgent drainage solutions, and alternative drainage routes.
-      </p>
     </section>
 
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section about-layout">
+      <div>
+        <p class="section-label" data-i18n="about.label">Professional Identity</p>
+        <h2 data-i18n="about.heading">The Technical Bridge Between Hydraulic Engineering, CAD Design, and Advanced GIS.</h2>
+        <div class="about-badges">
+          <div class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="about.badge1">GOPP Certified Expert Assistant</span>
+          </div>
+          <div class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="about.badge2">Author of 6 Registered Atlases</span>
+          </div>
+          <div class="about-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="about.badge3">Workflow Automation Developer</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p data-i18n="about.text1">
+          With over 5 years of hands-on experience, I build stormwater drainage networks, groundwater reduction systems, and InfraWizard-ready engineering datasets directly from field surveys, SewerGEMS/StormCAD model outputs, AutoCAD drawings, and GIS geodatabases. My deliverables include executive CAD plans, longitudinal profiles, structured GIS geodatabases, shapefiles, KML layers, network summaries, and elevation surfaces/DEM rasters.
+        </p>
+        <p data-i18n="about.text2">
+          Registered as an Urban Planning & GIS Expert Assistant with Egypt's General Organization for Physical Planning (GOPP). I have contributed to major infrastructure undertakings in Saudi Arabia, particularly emergency drainage solutions and alternative routes for Jeddah stormwater crises, dewatering systems in sensitive high-water-table districts, and climate-resilient ICZM planning in Egypt.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
     <section id="services" class="section">
       <div class="section-title row-title">
         <div>
-          <p class="section-label">Services</p>
-          <h2>What I can deliver</h2>
+          <p class="section-label" data-i18n="services.label">Services</p>
+          <h2 data-i18n="services.heading">What I deliver to engineering teams</h2>
         </div>
-        <p class="muted">Clear outputs for engineering teams, consultants, researchers, and infrastructure projects.</p>
+        <p class="muted" data-i18n="services.intro">Rigorous technical outputs for engineering consultancies, contractors, and infrastructure initiatives.</p>
       </div>
+
       <div class="service-grid">
-        <article class="service-card"><h3>Infrastructure GIS data preparation</h3><p>Structured shapefiles, geodatabases, KML files, attributes, and project-ready GIS datasets.</p></article>
-        <article class="service-card"><h3>CAD to GIS conversion</h3><p>Conversion of CAD drawings and utility networks into clean GIS layers and deliverables.</p></article>
-        <article class="service-card"><h3>Stormwater / groundwater networks</h3><p>Network preparation from survey levels, pipe data, invert levels, materials, and model outputs.</p></article>
-        <article class="service-card"><h3>InfraWizard building and review</h3><p>Structure/pipe setup, network coloring, profile extraction, QA/QC, and layout preparation.</p></article>
-        <article class="service-card"><h3>SewerGEMS / StormCAD cleanup</h3><p>FlexTable extraction, field cleanup, pipe size/material separation, and shapefile preparation.</p></article>
-        <article class="service-card"><h3>Maps, reports, and custom tools</h3><p>PDF maps, CAD layouts, profiles, summaries, research maps, and GIS/CAD workflow utilities.</p></article>
+        <article class="card service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 data-i18n="svc.1.t">Infrastructure GIS Geodatabases</h3>
+          <p data-i18n="svc.1.p">Structured shapefiles, file & enterprise geodatabases, KML files, and standardized attribute schemas ready for project delivery.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 data-i18n="svc.2.t">Precision CAD to GIS Conversion</h3>
+          <p data-i18n="svc.2.p">Converting CAD drawings and utility networks into clean, topologically verified GIS layers and deliverables.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 data-i18n="svc.3.t">Stormwater & Groundwater Networks</h3>
+          <p data-i18n="svc.3.p">Network preparation from survey levels, pipe data, invert levels, materials, and hydraulic model outputs.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 data-i18n="svc.4.t">InfraWizard Building & Review</h3>
+          <p data-i18n="svc.4.p">Structure/pipe setup, network coloring, longitudinal profile extraction, QA/QC audits, and executive layout preparation.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 data-i18n="svc.5.t">SewerGEMS / StormCAD Cleanup</h3>
+          <p data-i18n="svc.5.p">FlexTable extraction, field standardization, pipe diameter/material separation, and shapefile formatting before InfraWizard import.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3 data-i18n="svc.6.t">Maps, Elevation Surfaces & Custom Tools</h3>
+          <p data-i18n="svc.6.p">High-precision PDF maps, road surface DEMs/TIF rasters, quantitative summaries, and custom automation scripts for engineering workflows.</p>
+        </article>
       </div>
     </section>
 
+    <!-- ==================== FEATURED PROJECTS ==================== -->
     <section class="section featured-section">
       <div class="section-title row-title">
         <div>
-          <p class="section-label">Featured Projects</p>
-          <h2>Proof of work at a glance</h2>
+          <p class="section-label" data-i18n="featured.label">Featured Work</p>
+          <h2 data-i18n="featured.heading">Proof of work at a glance</h2>
         </div>
-        <a class="text-link" href="#projects">View full project experience</a>
+        <a class="text-link" href="#projects">
+          <span data-i18n="featured.link">View all detailed project experience</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
+
       <div class="featured-grid">
         <article class="featured-card">
-          <div class="visual-strip map-visual"><span>GIS</span><span>CAD</span><span>Profiles</span></div>
-          <h3>Jeddah Stormwater & Groundwater Networks</h3>
-          <dl><div><dt>Role</dt><dd>GIS / InfraWizard / CAD network preparation</dd></div><div><dt>Tools</dt><dd>InfraWizard, ArcGIS, AutoCAD, Civil 3D, Excel</dd></div><div><dt>Impact</dt><dd>Supported urgent drainage solutions and alternative routes for multiple planning zones.</dd></div></dl>
+          <div class="visual-strip map-visual">
+            <span data-i18n="feat1.s1">GIS Geodatabases</span>
+            <span data-i18n="feat1.s2">CAD Layouts</span>
+            <span data-i18n="feat1.s3">Profiles</span>
+          </div>
+          <h3 data-i18n="feat.1.t">Jeddah Stormwater &amp; Groundwater Networks</h3>
+          <dl>
+            <div>
+              <dt data-i18n="lbl.role">Role</dt>
+              <dd data-i18n="feat.1.role">GIS / InfraWizard / CAD network preparation</dd>
+            </div>
+            <div>
+              <dt data-i18n="lbl.tools">Tools</dt>
+              <dd data-i18n="feat.1.tools">InfraWizard, ArcGIS, AutoCAD, Civil 3D, Excel</dd>
+            </div>
+            <div>
+              <dt data-i18n="lbl.impact">Impact</dt>
+              <dd data-i18n="feat.1.impact">Supported urgent emergency drainage solutions and alternative routes for multiple major planning zones.</dd>
+            </div>
+          </dl>
         </article>
+
         <article class="featured-card">
-          <div class="visual-strip network-visual"><span>MH</span><span>CB</span><span>Pipes</span></div>
-          <h3>AL Jawaharah Mall Stormwater Drainage Network</h3>
-          <dl><div><dt>Role</dt><dd>Stormwater layout and network summary support</dd></div><div><dt>Deliverables</dt><dd>Manholes, catch basins, slopes, depths, coordinates, overflow pipes, summaries</dd></div><div><dt>Impact</dt><dd>Prepared technical drainage outputs for engineering review and presentation.</dd></div></dl>
+          <div class="visual-strip network-visual">
+            <span data-i18n="feat2.s1">Manholes</span>
+            <span data-i18n="feat2.s2">Catch Basins</span>
+            <span data-i18n="feat2.s3">Overflow Pipes</span>
+          </div>
+          <h3 data-i18n="feat.2.t">AL Jawaharah Mall Stormwater Drainage Network</h3>
+          <dl>
+            <div>
+              <dt data-i18n="lbl.role">Role</dt>
+              <dd data-i18n="feat.2.role">Stormwater drainage layout support and network summary</dd>
+            </div>
+            <div>
+              <dt data-i18n="lbl.deliverables">Deliverables</dt>
+              <dd data-i18n="feat.2.deliverables">Manholes, catch basins, slopes, depths, coordinates, overflow pipes, summaries</dd>
+            </div>
+            <div>
+              <dt data-i18n="lbl.impact">Impact</dt>
+              <dd data-i18n="feat.2.impact">Delivered an audit-ready technical package for engineering presentation and consultant sign-off.</dd>
+            </div>
+          </dl>
         </article>
+
         <article class="featured-card">
-          <div class="visual-strip tools-visual"><span>WPF</span><span>Toolbox</span><span>PDF</span></div>
-          <h3>GIS Tools 2026</h3>
-          <dl><div><dt>Role</dt><dd>Developer of workflow utilities and GIS/CAD automation tools</dd></div><div><dt>Tools</dt><dd>SmartGully, Smart Plot PDF, RoboTransfer, Storm Network Shapefile Toolbox</dd></div><div><dt>Impact</dt><dd>Reduced repetitive work in plotting, transfer, data organization, and storm network preparation.</dd></div></dl>
+          <div class="visual-strip tools-visual">
+            <span data-i18n="feat3.s1">WPF / C#</span>
+            <span data-i18n="feat3.s2">Toolbox</span>
+            <span data-i18n="feat3.s3">PDF Automation</span>
+          </div>
+          <h3 data-i18n="feat.3.t">Custom GIS Automation Software (2026)</h3>
+          <dl>
+            <div>
+              <dt data-i18n="lbl.role">Role</dt>
+              <dd data-i18n="feat.3.role">Developer of workflow utilities and GIS/CAD automation tools</dd>
+            </div>
+            <div>
+              <dt data-i18n="lbl.tools">Tools</dt>
+              <dd data-i18n="feat.3.tools">SmartGully, Smart Plot PDF, RoboTransfer, Storm Network Shapefile Toolbox</dd>
+            </div>
+            <div>
+              <dt data-i18n="lbl.impact">Impact</dt>
+              <dd data-i18n="feat.3.impact">Eliminated repetitive manual hours in plotting, file sync, data organization, and storm network generation.</dd>
+            </div>
+          </dl>
         </article>
       </div>
     </section>
 
+    <!-- ==================== DETAILED PROJECTS SECTION ==================== -->
     <section id="projects" class="section">
       <div class="section-title row-title">
         <div>
-          <p class="section-label">Projects</p>
-          <h2>Detailed project experience</h2>
+          <p class="section-label" data-i18n="projects.label">Projects</p>
+          <h2 data-i18n="projects.heading">Detailed Project Experience</h2>
         </div>
-        <p class="muted">Each card highlights role, tools, deliverables, and the problem solved.</p>
+        <p class="muted" data-i18n="projects.intro">Each card highlights role, tools, deliverables, and the real-world engineering problem solved.</p>
       </div>
 
-      
-      <div class="project-grid detailed-projects">
+      <div class="detailed-projects">
         <article class="project-card">
-          <div class="project-top"><span>Jeddah, KSA</span><b>Networks</b></div>
-          <h3>Stormwater & Groundwater Network Projects</h3>
-          <p><strong>Role:</strong> GIS / InfraWizard / CAD network preparation.</p>
-          <p><strong>Tools:</strong> InfraWizard, ArcGIS, AutoCAD, Civil 3D, Excel.</p>
-          <p><strong>Deliverables:</strong> Shapefiles, CAD layouts, profiles, KML, PDF maps, network summaries.</p>
-          <p><strong>Result:</strong> Supported urgent drainage solutions and alternative routes for multiple planning zones.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.1.loc">Jeddah, KSA</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.1.tag">Drainage &amp; Floods</span>
+          </div>
+          <h3 data-i18n="proj.1.t">Stormwater &amp; Groundwater Network Projects</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.1.role"><strong>Role:</strong> GIS / InfraWizard / CAD network preparation.</p>
+            <p data-i18n="proj.1.tools"><strong>Tools:</strong> InfraWizard, ArcGIS, AutoCAD, Civil 3D, Excel.</p>
+            <p data-i18n="proj.1.del"><strong>Deliverables:</strong> Shapefiles, CAD layouts, profiles, KML, PDF maps, network summaries.</p>
+            <p data-i18n="proj.1.res"><strong>Result:</strong> Supported urgent drainage solutions and alternative routes for multiple planning zones.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>Jeddah, KSA</span><b>Mall</b></div>
-          <h3>AL Jawaharah Mall Stormwater Drainage Network</h3>
-          <p><strong>Role:</strong> Stormwater drainage layout support.</p>
-          <p><strong>Tools:</strong> InfraWizard, GIS, CAD, Excel.</p>
-          <p><strong>Deliverables:</strong> Manholes, catch basins, pipe diameters, slopes, invert levels, depths, coordinates, overflow pipes, network summaries.</p>
-          <p><strong>Result:</strong> Prepared review-ready drainage information for engineering presentation.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.2.loc">Jeddah, KSA</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.2.tag">Commercial Megamall</span>
+          </div>
+          <h3 data-i18n="proj.2.t">AL Jawaharah Mall Stormwater Drainage Network</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.2.role"><strong>Role:</strong> Stormwater drainage layout and profile support.</p>
+            <p data-i18n="proj.2.tools"><strong>Tools:</strong> InfraWizard, GIS, AutoCAD, Excel.</p>
+            <p data-i18n="proj.2.del"><strong>Deliverables:</strong> Manholes, catch basins, pipe diameters, slopes, invert levels, depths, coordinates, overflow pipes, network summaries.</p>
+            <p data-i18n="proj.2.res"><strong>Result:</strong> Prepared review-ready drainage documentation for engineering sign-off.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>Jeddah, KSA</span><b>2022</b></div>
-          <h3>Groundwater Network Survey Project</h3>
-          <p><strong>Role:</strong> GIS/CAD dataset preparation and survey data conversion.</p>
-          <p><strong>Tools:</strong> ArcGIS, AutoCAD, Civil 3D, Excel.</p>
-          <p><strong>Deliverables:</strong> GIS/CAD datasets, plan extraction, profiles, survey-based outputs.</p>
-          <p><strong>Result:</strong> Organized groundwater and drainage survey information into usable engineering deliverables.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.3.loc">Jeddah, KSA</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.3.tag">Field Survey (2022)</span>
+          </div>
+          <h3 data-i18n="proj.3.t">Groundwater Network Survey Project</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.3.role"><strong>Role:</strong> GIS/CAD dataset preparation and survey data conversion.</p>
+            <p data-i18n="proj.3.tools"><strong>Tools:</strong> ArcGIS, AutoCAD, Civil 3D, Excel.</p>
+            <p data-i18n="proj.3.del"><strong>Deliverables:</strong> GIS/CAD datasets, plan extraction, profiles, survey-based outputs.</p>
+            <p data-i18n="proj.3.res"><strong>Result:</strong> Organized groundwater and drainage survey points into structured engineering models.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>Jeddah Municipality</span><b>2023</b></div>
-          <h3>Stormwater Drainage Networks</h3>
-          <p><strong>Role:</strong> Network drafting and GIS support across multiple planning zones.</p>
-          <p><strong>Plans:</strong> 583/G/S, 654/G/S, 677/G/S, 679/G/S, 680/G/S, 681/G/S, 682/G/S, 683/G/S, 704/G/S, 705/G/S, 718/G/S.</p>
-          <p><strong>Deliverables:</strong> Layouts, GIS layers, review outputs, technical maps.</p>
-          <p><strong>Result:</strong> Supported multi-zone stormwater network documentation and coordination.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.4.loc">Jeddah Municipality</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.4.tag">11 Masterplans</span>
+          </div>
+          <h3 data-i18n="proj.4.t">Stormwater Drainage Networks (2023)</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.4.role"><strong>Role:</strong> Network drafting and GIS support across multiple planning zones.</p>
+            <p data-i18n="proj.4.plans"><strong>Plans:</strong> 583/G/S, 654/G/S, 677/G/S, 679/G/S, 680/G/S, 681/G/S, 682/G/S, 683/G/S, 704/G/S, 705/G/S, 718/G/S.</p>
+            <p data-i18n="proj.4.del"><strong>Deliverables:</strong> Executive layouts, GIS layers, review outputs, technical maps.</p>
+            <p data-i18n="proj.4.res"><strong>Result:</strong> Supported multi-zone stormwater network documentation within target timelines.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>Jeddah, KSA</span><b>Dewatering</b></div>
-          <h3>Groundwater Control & Dewatering Systems</h3>
-          <p><strong>Role:</strong> Drafting and GIS support for dewatering projects.</p>
-          <p><strong>Districts:</strong> Alruwais, Alhamraa, Alkhalidiah, Alaziziah, Alasalah, and other areas.</p>
-          <p><strong>Deliverables:</strong> CAD/GIS outputs, route support, groundwater control mapping.</p>
-          <p><strong>Result:</strong> Organized dewatering information for commercial, residential, and infrastructure work.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.5.loc">Jeddah, KSA</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.5.tag">Dewatering Systems</span>
+          </div>
+          <h3 data-i18n="proj.5.t">Groundwater Control &amp; Dewatering Systems</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.5.role"><strong>Role:</strong> Drafting and GIS support for dewatering networks.</p>
+            <p data-i18n="proj.5.districts"><strong>Districts:</strong> Alruwais, Alhamraa, Alkhalidiah, Alaziziah, Alasalah, and other areas.</p>
+            <p data-i18n="proj.5.del"><strong>Deliverables:</strong> CAD/GIS outputs, discharge route support, groundwater control mapping.</p>
+            <p data-i18n="proj.5.res"><strong>Result:</strong> Organized dewatering data for commercial, residential, and infrastructure sectors.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>Riyadh, KSA</span><b>Flood</b></div>
-          <h3>Flood Protection for Wadi Laban</h3>
-          <p><strong>Role:</strong> Mapping, drafting, and engineering documentation support.</p>
-          <p><strong>Tools:</strong> GIS, CAD, technical layout workflows.</p>
-          <p><strong>Deliverables:</strong> Flood protection maps, drafting outputs, engineering documentation.</p>
-          <p><strong>Result:</strong> Supported flood protection review and documentation workflows.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.6.loc">Riyadh, KSA</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.6.tag">Flood Mitigation</span>
+          </div>
+          <h3 data-i18n="proj.6.t">Flood Protection for Wadi Laban</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.6.role"><strong>Role:</strong> Mapping, drafting, and engineering documentation support.</p>
+            <p data-i18n="proj.6.tools"><strong>Tools:</strong> GIS, CAD, technical layout workflows.</p>
+            <p data-i18n="proj.6.del"><strong>Deliverables:</strong> Flood protection maps, drafting outputs, engineering documentation.</p>
+            <p data-i18n="proj.6.res"><strong>Result:</strong> Supported flood mitigation analysis and drainage channel documentation.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>Jeddah, KSA</span><b>CAD to GIS</b></div>
-          <h3>CAD-to-GIS Electrical Plans</h3>
-          <p><strong>Role:</strong> Electrical plan conversion from CAD files into GIS databases.</p>
-          <p><strong>Plans:</strong> 675, 679, and 680.</p>
-          <p><strong>Deliverables:</strong> Structured GIS databases and cleaned utility layers.</p>
-          <p><strong>Result:</strong> Converted engineering drawings into data-ready GIS assets.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.7.loc">Jeddah, KSA</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.7.tag">CAD to GIS</span>
+          </div>
+          <h3 data-i18n="proj.7.t">CAD-to-GIS Electrical Plans</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.7.role"><strong>Role:</strong> Electrical plan conversion from CAD drawings into GIS databases.</p>
+            <p data-i18n="proj.7.plans"><strong>Plans:</strong> 675, 679, and 680.</p>
+            <p data-i18n="proj.7.del"><strong>Deliverables:</strong> Structured GIS databases and topologically cleaned utility layers.</p>
+            <p data-i18n="proj.7.res"><strong>Result:</strong> Converted engineering drawings into data-ready GIS spatial assets.</p>
+          </div>
         </article>
+
         <article class="project-card">
-          <div class="project-top"><span>North Coast, Egypt</span><b>2023</b></div>
-          <h3>Climate Resilient ICZM Plan</h3>
-          <p><strong>Role:</strong> GIS and mapping support for coastal zone management documentation.</p>
-          <p><strong>Tools:</strong> ArcGIS, map production, spatial analysis.</p>
-          <p><strong>Deliverables:</strong> Maps and documentation support for the North Coast of Egypt.</p>
-          <p><strong>Result:</strong> Contributed spatial outputs to climate-resilient ICZM documentation.</p>
+          <div class="project-top">
+            <span class="project-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="proj.8.loc">North Coast, Egypt</span>
+            </span>
+            <span class="project-tag" data-i18n="proj.8.tag">Coastal Resilience</span>
+          </div>
+          <h3 data-i18n="proj.8.t">Climate Resilient ICZM Plan (2023)</h3>
+          <div class="project-meta">
+            <p data-i18n="proj.8.role"><strong>Role:</strong> GIS and mapping support for integrated coastal zone management documentation.</p>
+            <p data-i18n="proj.8.tools"><strong>Tools:</strong> ArcGIS, map production, spatial analysis.</p>
+            <p data-i18n="proj.8.del"><strong>Deliverables:</strong> Detailed atlas maps and documentation for the Mediterranean North Coast.</p>
+            <p data-i18n="proj.8.res"><strong>Result:</strong> Provided spatial deliverables for Egypt's climate adaptation strategic documentation.</p>
+          </div>
         </article>
       </div>
-
     </section>
 
+    <!-- ==================== TOOLS 2026 SECTION ==================== -->
     <section id="tools-2026" class="section">
       <div class="section-title row-title">
         <div>
-          <p class="section-label">Software Tools Development</p>
-          <h2>Developed tools in 2026</h2>
+          <p class="section-label" data-i18n="tools.label">Software Development &amp; Automation</p>
+          <h2 data-i18n="tools.heading">Custom Tools &amp; Automation Packages (2026)</h2>
         </div>
-        <p class="muted">Practical tools built to support GIS data organization, CAD/GIS workflows, stormwater network preparation, PDF plotting, transfer automation, and daily technical calculations.</p>
+        <p class="muted" data-i18n="tools.intro">Bespoke tools built to eliminate manual bottlenecks in GIS data organization, CAD/GIS workflows, stormwater network preparation, PDF plotting, and file sync.</p>
       </div>
 
-      
       <div class="tools-grid">
-        <article class="tool-card"><span class="card-kicker">App</span><h3>Atlas of Egyptian Curriculums Maps App</h3><p>Maps application for Egyptian curriculum atlas and map workflows.</p><p><strong>Type:</strong> Maps app</p><p><strong>Status:</strong> Private preview</p></article>
-        <article class="tool-card"><span class="card-kicker">Utility</span><h3>DropAndCopy</h3><p>File handling tool for faster copy/drop workflows during project organization.</p><p><strong>Type:</strong> Windows utility</p><p><strong>Status:</strong> Stable workflow tool</p></article>
-        <article class="tool-card"><span class="card-kicker">GIS</span><h3>GIS_Data_Repositories_Professional_2026</h3><p>Structured GIS data repository package for professional GIS project organization.</p><p><strong>Type:</strong> Data organization system</p><p><strong>Status:</strong> 2026 package</p></article>
-        <article class="tool-card"><span class="card-kicker">Automation</span><h3>Qtra Pipe Auto Run</h3><p>Automation tool for pipe-related workflow execution and repetitive infrastructure processing steps.</p><p><strong>Type:</strong> Infrastructure workflow utility</p><p><strong>Status:</strong> Private preview</p></article>
-        <article class="tool-card"><span class="card-kicker">Transfer</span><h3>RoboTransfer</h3><p>Automation utility for transferring files and project outputs between working locations.</p><p><strong>Type:</strong> File transfer utility</p><p><strong>Status:</strong> Stable workflow tool</p></article>
-        <article class="tool-card"><span class="card-kicker">PDF</span><h3>Smart Plot PDF</h3><p>PDF plotting/export support tool for faster map and layout production.</p><p><strong>Type:</strong> Plotting utility</p><p><strong>Status:</strong> In development</p></article>
-        <article class="tool-card"><span class="card-kicker">Calc</span><h3>SmartCalculator</h3><p>Calculation utility for repeated technical and data-processing calculations.</p><p><strong>Type:</strong> Technical calculator</p><p><strong>Status:</strong> Private preview</p></article>
-        <article class="tool-card"><span class="card-kicker">Stormwater</span><h3>SmartGully</h3><p>Windows tool for stormwater gully workflows and drainage network preparation tasks.</p><p><strong>Features:</strong> Calculation support, drainage workflow support, report-ready outputs.</p><p><strong>Status:</strong> In development / private preview</p></article>
-        <article class="tool-card"><span class="card-kicker">Toolbox v1.8</span><h3>Text File to Storm Network Shapefile Toolbox</h3><p>Toolbox for converting text-file storm network data into shapefile outputs.</p><p><strong>Type:</strong> GIS toolbox</p><p><strong>Status:</strong> Version 1.8</p></article>
-      </div>
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.1.kicker">Maps App</span>
+          <h3 data-i18n="tool.1.t">Atlas of Egyptian Curriculums Maps App</h3>
+          <p data-i18n="tool.1.p1">Interactive maps application for Egyptian curriculum atlas workflows and educational spatial resources.</p>
+          <p data-i18n="tool.1.p2"><strong>Type:</strong> Interactive Maps App</p>
+          <p data-i18n="tool.1.p3"><strong>Status:</strong> Private Preview</p>
+        </article>
 
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.2.kicker">Desktop Utility</span>
+          <h3 data-i18n="tool.2.t">DropAndCopy</h3>
+          <p data-i18n="tool.2.p1">Smart file handling utility for accelerated drag-and-drop file organization during large project archiving.</p>
+          <p data-i18n="tool.2.p2"><strong>Type:</strong> Windows Desktop Utility</p>
+          <p data-i18n="tool.2.p3"><strong>Status:</strong> Stable Workflow Tool</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.3.kicker">GIS Data Repos</span>
+          <h3 data-i18n="tool.3.t">GIS Data Repositories Professional 2026</h3>
+          <p data-i18n="tool.3.p1">Structured GIS data repository framework for professional spatial project organization and standards.</p>
+          <p data-i18n="tool.3.p2"><strong>Type:</strong> Data Organization Architecture</p>
+          <p data-i18n="tool.3.p3"><strong>Status:</strong> 2026 Edition</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.4.kicker">Pipe Automation</span>
+          <h3 data-i18n="tool.4.t">Qtra Pipe Auto Run</h3>
+          <p data-i18n="tool.4.p1">Automation tool for pipe-related workflow execution and repetitive infrastructure calculation steps.</p>
+          <p data-i18n="tool.4.p2"><strong>Type:</strong> Infrastructure Workflow Utility</p>
+          <p data-i18n="tool.4.p3"><strong>Status:</strong> Private Preview</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.5.kicker">File Transfer</span>
+          <h3 data-i18n="tool.5.t">RoboTransfer</h3>
+          <p data-i18n="tool.5.p1">Automation utility for syncing and transferring large project deliverables between workstation drives.</p>
+          <p data-i18n="tool.5.p2"><strong>Type:</strong> High-Speed Transfer Utility</p>
+          <p data-i18n="tool.5.p3"><strong>Status:</strong> Stable Workflow Tool</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.6.kicker">Plotting Utility</span>
+          <h3 data-i18n="tool.6.t">Smart Plot PDF</h3>
+          <p data-i18n="tool.6.p1">Automated PDF plotting and export utility for rapid batch map and layout production.</p>
+          <p data-i18n="tool.6.p2"><strong>Type:</strong> Batch Plotting Tool</p>
+          <p data-i18n="tool.6.p3"><strong>Status:</strong> Active Development</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.7.kicker">Calculator</span>
+          <h3 data-i18n="tool.7.t">SmartCalculator</h3>
+          <p data-i18n="tool.7.p1">Technical calculation utility for repetitive hydraulic, leveling, and data processing formulas.</p>
+          <p data-i18n="tool.7.p2"><strong>Type:</strong> Technical Calculator</p>
+          <p data-i18n="tool.7.p3"><strong>Status:</strong> Private Preview</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.8.kicker">Stormwater Gullies</span>
+          <h3 data-i18n="tool.8.t">SmartGully</h3>
+          <p data-i18n="tool.8.p1">Windows tool for stormwater catch-basin/gully workflows, hydraulic checking, and drainage preparation.</p>
+          <p data-i18n="tool.8.p2"><strong>Features:</strong> Calculation support, drainage workflow assist, report exports.</p>
+          <p data-i18n="tool.8.p3"><strong>Status:</strong> Private Preview</p>
+        </article>
+
+        <article class="card tool-card">
+          <span class="card-kicker" data-i18n="tool.9.kicker">Toolbox v1.8</span>
+          <h3 data-i18n="tool.9.t">Text File to Storm Network Shapefile Toolbox v1.8</h3>
+          <p data-i18n="tool.9.p1">ArcGIS toolbox for directly converting text-file storm network datasets into structured shapefiles.</p>
+          <p data-i18n="tool.9.p2"><strong>Type:</strong> Custom GIS Toolbox</p>
+          <p data-i18n="tool.9.p3"><strong>Status:</strong> Version 1.8</p>
+        </article>
+      </div>
     </section>
 
+    <!-- ==================== EXPERTISE SECTION ==================== -->
     <section id="expertise" class="section">
       <div class="section-title row-title">
         <div>
-          <p class="section-label">Specialized Expertise</p>
-          <h2>Focused infrastructure workflows</h2>
+          <p class="section-label" data-i18n="exp.label">Specialized Expertise</p>
+          <h2 data-i18n="exp.heading">Focused Infrastructure Engineering Workflows</h2>
         </div>
-        <p class="muted">Full CV detail across InfraWizard, survey data, QA/QC, GIS, CAD, KML, surfaces, and hydraulic-model preparation.</p>
+        <p class="muted" data-i18n="exp.intro">Full-spectrum workflow across InfraWizard, survey leveling, QA/QC slope audits, CAD/GIS integration, surfaces, and hydraulic models.</p>
       </div>
 
       <div class="expertise-grid">
-        <article class="feature-card">
-          <span class="card-kicker">InfraWizard</span>
-          <h3>Stormwater & Groundwater Networks</h3>
-          <p>Manual network building, structure/pipe setup, profile extraction, network coloring, layout preparation, and practical handling of InfraWizard limitations.</p>
+        <article class="card feature-card">
+          <span class="card-kicker" data-i18n="exp.1.kicker">InfraWizard</span>
+          <h3 data-i18n="exp.1.t">Stormwater &amp; Groundwater Networks</h3>
+          <p data-i18n="exp.1.p">Manual network building, structure/pipe setup, profile extraction, network coloring, layout preparation, and practical handling of InfraWizard limitations.</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">Survey Data</span>
-          <h3>Survey-to-Network Workflows</h3>
-          <p>Converting field survey levels, coordinates, pipe diameters, materials, ground levels, invert levels, and depths into structured drainage network models.</p>
+
+        <article class="card feature-card">
+          <span class="card-kicker" data-i18n="exp.2.kicker">Field Survey</span>
+          <h3 data-i18n="exp.2.t">Survey-to-Network Workflows</h3>
+          <p data-i18n="exp.2.p">Converting field survey levels, coordinates, pipe diameters, materials, ground levels, invert levels, and depths into structured drainage network models.</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">Model Outputs</span>
-          <h3>SewerGEMS / StormCAD Data Preparation</h3>
-          <p>Extracting and cleaning FlexTable outputs, preparing shapefiles, separating pipe diameter and material fields, and resolving data formats before InfraWizard import.</p>
+
+        <article class="card feature-card">
+          <span class="card-kicker" data-i18n="exp.3.kicker">Hydraulic Modeling</span>
+          <h3 data-i18n="exp.3.t">SewerGEMS / StormCAD Interoperability</h3>
+          <p data-i18n="exp.3.p">Extracting and cleaning FlexTable outputs, preparing shapefiles, separating pipe diameter and material fields, and resolving data formats before InfraWizard import.</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">QA/QC</span>
-          <h3>Network Review & QA/QC Support</h3>
-          <p>Checking negative slopes, invert/ground level consistency, pipe sizes, naming conventions, depth values, protection requirements, and engineering presentation quality.</p>
+
+        <article class="card feature-card">
+          <span class="card-kicker" data-i18n="exp.4.kicker">QA/QC Audit</span>
+          <h3 data-i18n="exp.4.t">Network Review &amp; Slope Auditing</h3>
+          <p data-i18n="exp.4.p">Checking negative slopes, invert/ground level consistency, pipe sizes, naming conventions, depth values, protection requirements, and presentation quality.</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">Deliverables</span>
-          <h3>GIS / CAD / KML Deliverables</h3>
-          <p>Preparing geodatabases, shapefiles, CAD drawings, KML files, PDF layouts, network summaries, and map outputs for engineering teams and clients.</p>
+
+        <article class="card feature-card">
+          <span class="card-kicker" data-i18n="exp.5.kicker">Deliverables</span>
+          <h3 data-i18n="exp.5.t">GIS / CAD / KML Deliverables</h3>
+          <p data-i18n="exp.5.p">Preparing geodatabases, shapefiles, CAD drawings, KML files, PDF layouts, network summaries, and map outputs for engineering teams and clients.</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">Surfaces</span>
-          <h3>Surface & Raster Preparation</h3>
-          <p>Generating road/survey-based surfaces from points and centerline/edge data, preparing TIF raster surfaces for use in Civil 3D, SewerGEMS, StormCAD, ICM, and related modeling workflows.</p>
+
+        <article class="card feature-card">
+          <span class="card-kicker" data-i18n="exp.6.kicker">Surfaces</span>
+          <h3 data-i18n="exp.6.t">Surface &amp; DEM Raster Preparation</h3>
+          <p data-i18n="exp.6.p">Generating road/survey surfaces from points and centerline/edge data, preparing TIF raster surfaces for use in Civil 3D, SewerGEMS, StormCAD, and ICM.</p>
         </article>
       </div>
     </section>
 
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
     <section id="experience" class="section">
       <div class="section-title">
-        <p class="section-label">Professional Experience</p>
-        <h2>Career timeline</h2>
+        <p class="section-label" data-i18n="experience.label">Professional Experience</p>
+        <h2 data-i18n="experience.heading">Career Timeline</h2>
       </div>
 
       <div class="timeline">
         <article class="timeline-item">
-          <div class="timeline-date">Oct 2021 - Dec 2024</div>
+          <div class="timeline-date" data-i18n="work.1.date">Oct 2021 - Dec 2024</div>
           <div class="timeline-content">
-            <h3>GIS Specialist & Hydrological Drafting Specialist</h3>
-            <p class="company">Vision Dimensions Engineering Consultancy</p>
+            <h3 data-i18n="work.1.t">GIS Specialist &amp; Hydrological Drafting Specialist</h3>
+            <p class="company" data-i18n="work.1.co">Vision Dimensions Engineering Consultancy</p>
             <ul>
-              <li>Built and prepared stormwater drainage and groundwater reduction networks using InfraWizard based on survey data, pipe diameters, materials, ground levels, invert levels, and engineering constraints.</li>
-              <li>Converted CAD drawings, field survey outputs, and engineering model exports into structured GIS datasets, shapefiles, geodatabases, KML files, CAD outputs, and PDF layouts.</li>
-              <li>Prepared InfraWizard-ready data from SewerGEMS/StormCAD outputs, including FlexTable extraction, field cleanup, pipe size/material separation, and shapefile processing before import.</li>
-              <li>Reviewed stormwater and groundwater networks for negative slopes, depth/invert consistency, pipe diameter suitability, naming quality, protection requirements, and presentation standards.</li>
-              <li>Prepared engineering plans, profiles, network summaries, viewports, layouts, and technical mapping outputs for urgent drainage solutions, alternative routes, and groundwater control projects.</li>
-              <li>Generated survey/road-based surfaces and raster TIF outputs from point data and road centerline/edge levels to support hydraulic modeling and Civil 3D/GIS workflows.</li>
-              <li>Supported hydrological report preparation through data collection, spatial analysis, map production, technical documentation, and workflow improvement.</li>
+              <li data-i18n="work.1.li1">Built and prepared stormwater drainage and groundwater reduction networks using InfraWizard based on survey data, pipe diameters, materials, ground levels, invert levels, and engineering constraints.</li>
+              <li data-i18n="work.1.li2">Converted CAD drawings, field survey outputs, and engineering model exports into structured GIS datasets, shapefiles, geodatabases, KML files, CAD outputs, and PDF layouts.</li>
+              <li data-i18n="work.1.li3">Prepared InfraWizard-ready data from SewerGEMS/StormCAD outputs, including FlexTable extraction, field cleanup, pipe size/material separation, and shapefile processing before import.</li>
+              <li data-i18n="work.1.li4">Reviewed stormwater and groundwater networks for negative slopes, depth/invert consistency, pipe diameter suitability, naming quality, protection requirements, and presentation standards.</li>
+              <li data-i18n="work.1.li5">Prepared engineering plans, profiles, network summaries, viewports, layouts, and technical mapping outputs for urgent drainage solutions, alternative routes, and groundwater control projects.</li>
+              <li data-i18n="work.1.li6">Generated survey/road-based surfaces and raster TIF outputs from point data and road centerline/edge levels to support hydraulic modeling and Civil 3D/GIS workflows.</li>
+              <li data-i18n="work.1.li7">Supported hydrological report preparation through data collection, spatial analysis, map production, technical documentation, and workflow improvement.</li>
             </ul>
           </div>
         </article>
 
         <article class="timeline-item">
-          <div class="timeline-date">Jan 2020 - Oct 2021</div>
+          <div class="timeline-date" data-i18n="work.2.date">Jan 2020 - Oct 2021</div>
           <div class="timeline-content">
-            <h3>Freelance GIS Specialist</h3>
-            <p class="company">Independent Projects</p>
+            <h3 data-i18n="work.2.t">Freelance GIS &amp; Infrastructure Specialist</h3>
+            <p class="company" data-i18n="work.2.co">Independent Projects</p>
             <ul>
-              <li>Delivered GIS and mapping support for infrastructure network projects including electricity, gas, sewage, and utility networks.</li>
-              <li>Prepared maps and spatial outputs for master's and doctoral theses, academic research, and registered geographical atlases.</li>
-              <li>Conducted GIS training sessions and supported learners in practical map production, terrain analysis, and remote sensing workflows.</li>
+              <li data-i18n="work.2.li1">Delivered GIS and mapping support for infrastructure network projects including electricity, gas, sewage, and utility networks.</li>
+              <li data-i18n="work.2.li2">Prepared maps and spatial outputs for master's and doctoral theses, academic research, and registered geographical atlases.</li>
+              <li data-i18n="work.2.li3">Conducted GIS training sessions and supported learners in practical map production, terrain analysis, and remote sensing workflows.</li>
             </ul>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- ==================== PUBLICATIONS SECTION ==================== -->
     <section id="publications" class="section">
       <div class="section-title">
-        <p class="section-label">Publications & Scientific Contributions</p>
-        <h2>Complete CV details</h2>
+        <p class="section-label" data-i18n="pub.label">Publications &amp; Scientific Contributions</p>
+        <h2 data-i18n="pub.heading">Registered Atlases &amp; Academic Contributions</h2>
       </div>
 
       <div class="publication-detail">
         <ul>
-          <li>Authored Atlas of Egypt, the Arab World and the World, registered with the National Library and Archives of Egypt under Local Deposit No. 2021/20535 and ISBN 9789779095615.</li>
-          <li>Authored Atlas of the World and the Arab World, registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15361 and ISBN 9789779425962.</li>
-          <li>Authored Atlas of Geography of Egypt, registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15362 and ISBN 9789779425979.</li>
-          <li>Authored Atlas of Geography of Development, registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15363 and ISBN 9789779425986.</li>
-          <li>Authored Atlas of Political Geography, registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15364 and ISBN 9789779425993.</li>
-          <li>Authored Atlas of Blank Maps, registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15365 and ISBN 9789779426006.</li>
-          <li>Reviewed the 2020 edition of the World Atlas, produced by Dar Al-Irshad, Cairo Branch.</li>
-          <li>Participated in producing the Atlas of the Nile Basin Countries - Geological Aspect at the Maps and GIS Division, Department of Geography, Faculty of Arts, Cairo University, 2018.</li>
-          <li>Prepared maps for several scientific research papers, master's theses, and doctoral dissertations.</li>
-          <li>One year of experience delivering GIS and remote sensing training sessions.</li>
-          <li>Delivered online training sessions via Zoom in 2021 on GIS applications, including slope aspect mapping, surface roughness mapping, local elevation mapping, and alternative terrain shadow mapping techniques.</li>
+          <li data-i18n="pub.li1"><strong>Atlas of Egypt, the Arab World and the World:</strong> Authored by Ahmad Ibrahim - Registered with the National Library and Archives of Egypt under Local Deposit No. 2021/20535 and ISBN 9789779095615.</li>
+          <li data-i18n="pub.li2"><strong>Atlas of the World and the Arab World:</strong> Authored by Ahmad Ibrahim - Registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15361 and ISBN 9789779425962.</li>
+          <li data-i18n="pub.li3"><strong>Atlas of Geography of Egypt:</strong> Authored by Ahmad Ibrahim - Registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15362 and ISBN 9789779425979.</li>
+          <li data-i18n="pub.li4"><strong>Atlas of Geography of Development:</strong> Authored by Ahmad Ibrahim - Registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15363 and ISBN 9789779425986.</li>
+          <li data-i18n="pub.li5"><strong>Atlas of Political Geography:</strong> Authored by Ahmad Ibrahim - Registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15364 and ISBN 9789779425993.</li>
+          <li data-i18n="pub.li6"><strong>Atlas of Blank Maps:</strong> Authored by Ahmad Ibrahim - Registered with the National Library and Archives of Egypt under Local Deposit No. 2022/15365 and ISBN 9789779426006.</li>
+          <li data-i18n="pub.li7"><strong>World Atlas (2020 Edition):</strong> Technical review of the cartographic material produced by Dar Al-Irshad, Cairo Branch.</li>
+          <li data-i18n="pub.li8"><strong>Atlas of the Nile Basin Countries (Geological Aspect):</strong> Participated in cartographic production at the Maps and GIS Division, Cairo University (2018).</li>
+          <li data-i18n="pub.li9"><strong>Academic Cartography:</strong> Prepared analytical maps for several scientific research papers, master's theses, and doctoral dissertations.</li>
+          <li data-i18n="pub.li10"><strong>Professional GIS Training:</strong> Experience delivering practical GIS and remote sensing training sessions for engineering students and professionals.</li>
+          <li data-i18n="pub.li11"><strong>Digital Terrain Workshops (2021):</strong> Delivered online training sessions on slope aspect mapping, surface roughness, local elevation modeling, and alternative terrain shadow techniques.</li>
         </ul>
       </div>
     </section>
 
+    <!-- ==================== EDUCATION SECTION ==================== -->
     <section id="education" class="section education-layout">
       <div>
-        <p class="section-label">Education</p>
-        <h2>Bachelor of Arts in Geography, Maps & Geographic Information Systems Specialization</h2>
-        <p>Faculty of Arts, Cairo University | May 2018.</p>
+        <p class="section-label" data-i18n="edu.label">Academic Credentials</p>
+        <h2 data-i18n="edu.heading">Bachelor of Arts in Geography, Maps &amp; Geographic Information Systems Specialization</h2>
+        <p class="school-name" data-i18n="edu.school">Faculty of Arts, Cairo University | May 2018</p>
       </div>
+
       <div>
-        <p class="section-label">Training Courses</p>
+        <p class="section-label" data-i18n="train.label">Accredited Professional Courses</p>
         <ul>
-          <li>Planning and Geographic Information Systems Course | May 1, 2024 - August 30, 2024.</li>
-          <li>Geomatics Course | Research and Training Center, Ain Shams University | July 10, 2017 - August 17, 2017.</li>
-          <li>Introduction to Remote Sensing | National Authority for Remote Sensing and Space Sciences | August 21-25, 2016.</li>
-          <li>Surveying Course | African Center for Surveying Services (ACSS) | August 2016.</li>
+          <li data-i18n="train.li1"><strong>Urban Planning &amp; GIS Course:</strong> Certified by the General Organization for Physical Planning (GOPP) | May 1, 2024 - August 30, 2024.</li>
+          <li data-i18n="train.li2"><strong>Geomatics Diploma:</strong> Research and Training Center, Ain Shams University | July 10, 2017 - August 17, 2017.</li>
+          <li data-i18n="train.li3"><strong>Introduction to Remote Sensing:</strong> National Authority for Remote Sensing and Space Sciences (NARSS) | August 21 - 25, 2016.</li>
+          <li data-i18n="train.li4"><strong>Surveying &amp; Survey Equipment:</strong> African Center for Surveying Services (ACSS) | August 2016.</li>
         </ul>
+
         <div class="language-note">
-          <h3>Languages</h3>
-          <p>Arabic: Native</p>
-          <p>English: Technical working proficiency - able to read GIS/CAD documentation, software interfaces, and engineering datasets with translation support.</p>
+          <h3 data-i18n="lang.h">Languages</h3>
+          <p data-i18n="lang.p1"><strong>Arabic:</strong> Native language (fluent technical and engineering formulation).</p>
+          <p data-i18n="lang.p2"><strong>English:</strong> Technical working proficiency - full understanding of GIS/CAD documentation, engineering interfaces, and regional project datasets.</p>
         </div>
       </div>
     </section>
 
+    <!-- ==================== CONTACT SECTION ==================== -->
     <section id="contact" class="section">
       <div class="contact-panel">
         <div>
-          <p class="section-label">Contact</p>
-          <h2>Need GIS, stormwater, CAD-to-GIS, or mapping support?</h2>
-          <p class="muted">Available for infrastructure GIS deliverables, InfraWizard network preparation, CAD-to-GIS workflows, stormwater and groundwater network support, scientific maps, and custom workflow tools.</p>
+          <p class="section-label" data-i18n="contact.label">Get In Touch</p>
+          <h2 data-i18n="contact.heading">Need GIS, Stormwater, CAD-to-GIS, or Mapping Support?</h2>
+          <p class="muted" data-i18n="contact.intro">Available for infrastructure GIS deliverables, InfraWizard network preparation, CAD-to-GIS workflows, stormwater and groundwater network support, scientific maps, and custom workflow tools.</p>
         </div>
+
         <div class="contact-links">
-          <a class="contact-primary" href="https://wa.me/201111915925">Contact on WhatsApp<span class="print-only">— https://wa.me/201111915925</span></a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ahmadibrahim.geo@gmail.com&amp;su=Portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Send Email<span class="print-only">— ahmadibrahim.geo@gmail.com</span></a>
-          <a href="https://linkedin.com/in/ahmadibrahim4geo">LinkedIn<span class="print-only">— https://linkedin.com/in/ahmadibrahim4geo</span></a>
-          <a href="https://github.com/ahmadibrahim4geo">GitHub<span class="print-only">— https://github.com/ahmadibrahim4geo</span></a>
+          <a class="contact-whatsapp" href="https://wa.me/201111915925" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+            <span data-i18n="contact.whatsapp">Chat on WhatsApp (+20 111 191 5925)</span>
+            <span class="print-only">https://wa.me/201111915925</span>
+          </a>
+
+          <a class="contact-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmadibrahim.geo@gmail.com&su=Portfolio%20inquiry" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span data-i18n="contact.email">Send Direct Email</span>
+            <span class="print-only">ahmadibrahim.geo@gmail.com</span>
+          </a>
+
+          <a href="https://linkedin.com/in/ahmadibrahim4geo" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span data-i18n="contact.linkedin">LinkedIn Profile</span>
+            <span class="print-only">linkedin.com/in/ahmadibrahim4geo</span>
+          </a>
+
+          <a href="https://github.com/ahmadibrahim4geo" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span data-i18n="contact.github">GitHub Profile</span>
+            <span class="print-only">github.com/ahmadibrahim4geo</span>
+          </a>
+
+          <a href="tel:+201111915925">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span data-i18n="contact.phone">Direct Phone (+20 111 191 5925 / +20 107 061 9064)</span>
+            <span class="print-only">+20 111 191 5925</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ==================== FOOTER ==================== -->
   <footer>
-    <p>&copy; 2026 Ahmad Ibrahim. Infrastructure GIS &amp; Stormwater Network Specialist.</p>
+    <p data-i18n="footer.text">&copy; 2026 Ahmad Ibrahim. Infrastructure GIS &amp; Stormwater Network Specialist.</p>
   </footer>
 
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <!-- ==================== CLIENT SCRIPTS & I18N ==================== -->
   <script>
     (function () {
+      /* ---------- Translation Dictionary ---------- */
+      var I18N = {
+        ar: {
+        "doc.title": "أحمد إبراهيم | متخصص نظم المعلومات الجغرافية للبنية التحتية وشبكات تصريف الأمطار والسيول",
+        "doc.desc": "أخصائي نظم معلومات جغرافية (GIS) وبنية تحتية متخصص في شبكات تصريف مياه الأمطار والسيول، وخفض المياه الجوفية، وأعمال InfraWizard، والتحويل الهندسي من CAD إلى GIS، وتطوير أدوات الأتمتة البرمجية.",
+        "aria.brand": "الصفحة الرئيسية لأحمد إبراهيم - أخصائي GIS والبنية التحتية",
+        "aria.nav": "قائمة التنقل الرئيسية",
+        "aria.quick": "حقائق ومؤشرات سريعة عن الملف الشخصي",
+        "aria.heroCard": "البطاقة التعريفية وأبرز المؤشرات المهنية",
+        "aria.lang": "اختيار لغة الموقع",
+        "brand.name": "أحمد إبراهيم",
+        "brand.role": "أخصائي GIS وبنية تحتية",
+        "nav.about": "من أنا",
+        "nav.services": "الخدمات",
+        "nav.projects": "المشاريع",
+        "nav.tools": "أدوات 2026",
+        "nav.expertise": "منهجية العمل",
+        "nav.experience": "الخبرة المهنية",
+        "nav.publications": "المؤلفات والأطالس",
+        "nav.education": "المؤهلات",
+        "nav.contact": "تواصل معي",
+        "cta.downloadCv": "تحميل السيرة الذاتية PDF",
+        "hero.beacon": "متاح للتعاقدات الاستشارية ومشاريع البنية التحتية والـ GIS",
+        "hero.name": "أحمد إبراهيم",
+        "hero.headline": "متخصص نظم المعلومات الجغرافية للبنية التحتية، وشبكات تصريف مياه الأمطار والسيول، وخفض المياه الجوفية",
+        "hero.summary": "أجمع بين الأساس الجغرافي الأكاديمي الرصين والخبرة الهندسية الميدانية في كبرى مشروعات البنية التحتية وتصريف السيول بمصر والمملكة العربية السعودية. أتخصص في الربط التقني المتكامل بين مخرجات النمذجة الهيدروليكية (SewerGEMS / StormCAD)، وبرامج التصميم الهندسي (InfraWizard / Civil 3D / AutoCAD)، وبناء قواعد البيانات الجغرافية (GIS Geodatabases)، مع ابتكار وتطوير أدوات برمجية مخصصة لأتمتة سير العمل وتسليم مخرجات هندسية دقيقة خالية من الأخطاء.",
+        "hero.viewProjects": "استعراض المشروعات الهندسية",
+        "hero.downloadCv": "تحميل السيرة الذاتية (PDF)",
+        "hero.whatsapp": "محادثة فورية على واتساب",
+        "quick.1": "مقر العمل: الجيزة، مصر (متاح للمشاريع الإقليمية)",
+        "quick.2": "+5 سنوات خبرة متخصصة في GIS البنية التحتية",
+        "quick.3": "مشاريع معتمدة بالمملكة العربية السعودية ومصر",
+        "quick.4": "مساعد خبير معتمد بالهيئة العامة للتخطيط العمراني (GOPP)",
+        "badge.gopp": "مساعد خبير معتمد GOPP",
+        "stat.years": "سنوات خبرة",
+        "stat.atlases": "أطالس معتمدة",
+        "stat.tools": "أدوات أتمتة 2026",
+        "metric.1.val": "+5 سنوات",
+        "metric.1.title": "خبرة بنية تحتية وGIS",
+        "metric.1.desc": "في إعداد شبكات تصريف الأمطار والسيول وخفض منسوب المياه الجوفية والنزح السطحي.",
+        "metric.2.val": "6 أطالس",
+        "metric.2.title": "مؤلفات رسمية مسجلة",
+        "metric.2.desc": "بدار الكتب والوثائق القومية المصرية بأرقام إيداع محلية وترقيم دولي معتمد (ISBN).",
+        "metric.3.val": "11+ مخططاً",
+        "metric.3.title": "مخططات أمانة جدة",
+        "metric.3.desc": "شبكات تصريف مياه الأمطار والحلول العاجلة والمسارات البديلة لمناطق تخطيطية كبرى.",
+        "metric.4.val": "9 برمجيات",
+        "metric.4.title": "أدوات وحزم أتمتة 2026",
+        "metric.4.desc": "ابتكار وتطوير أدوات هندسية لحل مشكلات نقل وتجهيز وتحويل بيانات الشبكات.",
+        "about.label": "الهوية المهنية والرؤية",
+        "about.heading": "حلقة الوصل التقنية بين التصميم الهندسي، والنمذجة الهيدروليكية، ونظم المعلومات الجغرافية.",
+        "about.text1": "أمتلك خبرة عملية تزيد عن 5 سنوات في إعداد شبكات تصريف مياه الأمطار والسيول، ونظم خفض منسوب المياه الجوفية (Dewatering Systems)، وتجهيز شبكات برنامج InfraWizard بالكامل اعتماداً على مخرجات المسح الميداني ونماذج SewerGEMS وStormCAD ومخططات AutoCAD وCivil 3D. تشمل مخرجاتي اللوحات الهندسية التنفيذية، والقطاعات الطولية (Profiles)، وقواعد البيانات الجغرافية (Enterprise & File Geodatabases)، وطبقات الـ Shapefiles، وملفات KML، وجداول الكميات والملخصات الهندسية، ونماذج الارتفاع الرقمية (DEM / Rasters).",
+        "about.text2": "مُسجَّل كمساعد خبير تخطيط وتطوير عمراني ونظم معلومات جغرافية بالهيئة العامة للتخطيط العمراني (GOPP) بمصر. وقد شاركت في إنجاز مشروعات حيوية كبرى بالمملكة العربية السعودية، لا سيما حلول درء أخطار السيول وتصريف مياه أمطار جدة، ومشاريع التحكم في المياه الجوفية، والحلول العاجلة، والمسارات البديلة، بالإضافة لمشاريع التنمية الساحلية المقاومة للمناخ بمصر.",
+        "about.badge1": "مساعد خبير معتمد GOPP",
+        "about.badge2": "مؤلف 6 أطالس بدار الكتب",
+        "about.badge3": "تطوير أدوات أتمتة هندسية",
+        "services.label": "الخدمات التخصصية",
+        "services.heading": "ما يمكنني تقديمه للفرق الهندسية والاستشارية",
+        "services.intro": "حلول متكاملة ومخرجات هندسية دقيقة تدعم استشاريي البنية التحتية، والمكاتب الهندسية، والمقاولين، والمشاريع الكبرى.",
+        "svc.1.t": "إعداد بيانات GIS للبنية التحتية",
+        "svc.1.p": "تصميم وبناء قواعد البيانات الجغرافية (Geodatabases)، وملفات Shapefiles، وطبقات KML، ومطابقة البيانات الوصفية وهيكلتها بدقة للمشروع.",
+        "svc.2.t": "التحويل الهندسي الدقيق من CAD إلى GIS",
+        "svc.2.p": "تحويل مخططات CAD وشبكات المرافق إلى طبقات GIS مهيكلة ونظيفة طبولوجياً، وتصنيف الطبقات وفصل العناصر بدقة متناهية.",
+        "svc.3.t": "شبكات تصريف مياه الأمطار والسيول والمياه الجوفية",
+        "svc.3.p": "بناء وتوصيف الشبكات من مناسيب الرفع المساحي، وأقطار ومواد المواسير، ومناسيب القاع (Invert Levels)، ومخرجات النماذج الهيدروليكية.",
+        "svc.4.t": "بناء ومراجعة شبكات InfraWizard",
+        "svc.4.p": "تهيئة وتوصيف غرف التفتيش والمواسير، وتلوين الشبكات، واستخراج القطاعات الطولية (Profiles)، وضبط الجودة وتجهيز اللوحات التنفيذية.",
+        "svc.5.t": "معالجة وتجهيز مخرجات SewerGEMS / StormCAD",
+        "svc.5.p": "استخراج جداول FlexTables، وتنظيف الحقول وتوحيد التنسيقات، وفصل الأقطار والمواد، وتجهيز طبقات Shapefile للاستيراد السلس إلى InfraWizard.",
+        "svc.6.t": "الخرائط الفنية ونماذج الأسطح وأدوات الأتمتة",
+        "svc.6.p": "إنتاج خرائط وتقارير PDF عالية الدقة، وتوليد أسطح الطرق ونماذج TIF Rasters، وتطوير أدوات برمجية مخصصة لأتمتة سير العمل.",
+        "featured.label": "مشاريع مميزة",
+        "featured.heading": "نماذج حية من الخبرة الميدانية والتنفيذية",
+        "featured.link": "استعراض كافة المشروعات المنفذة بالتفصيل",
+        "feat1.s1": "GIS",
+        "feat1.s2": "CAD",
+        "feat1.s3": "قطاعات طولية",
+        "feat.1.t": "شبكات تصريف الأمطار والمياه الجوفية - محافظة جدة",
+        "feat.1.role": "إعداد وتوصيف الشبكات عبر GIS / InfraWizard / CAD",
+        "feat.1.tools": "InfraWizard، ArcGIS، AutoCAD، Civil 3D، Excel",
+        "feat.1.impact": "إعداد وتجهيز مخرجات الحلول العاجلة والمسارات البديلة لشبكات تصريف مياه الأمطار وخفض المياه الجوفية لعشرات المخططات السكنية والتخطيطية.",
+        "feat2.s1": "غرف تفتيش",
+        "feat2.s2": "مصافي أمطار",
+        "feat2.s3": "مواسير فائض",
+        "feat.2.t": "شبكة تصريف مياه الأمطار لمول الجوهرة بجدة",
+        "feat.2.role": "دعم رسم ونمذجة وتلخيص شبكة تصريف الأمطار للمول",
+        "feat.2.deliverables": "تحديد مواقع غرف التفتيش، ومصافي الأمطار، وحساب الميول والأعماق ومناسيب القاع، ومواسير الفائض، وجداول الملخصات الهندسية.",
+        "feat.2.impact": "تسليم حزمة مخرجات فنية متكاملة جاهزة للاعتماد والمراجعة الهندسية والعرض الفني على استشاري المشروع.",
+        "feat3.s1": "WPF / C#",
+        "feat3.s2": "Toolbox",
+        "feat3.s3": "أتمتة PDF",
+        "feat.3.t": "حزمة برمجيات وأدوات أتمتة الـ GIS المبتكرة (2026)",
+        "feat.3.role": "مبتكر ومطور أدوات سير العمل وحزم الأتمتة لمهندسي البنية التحتية",
+        "feat.3.tools": "SmartGully، Smart Plot PDF، RoboTransfer، Text-to-Shapefile Toolbox",
+        "feat.3.impact": "توفير مئات ساعات العمل اليدوي في تصدير الخرائط، ونقل الملفات، وتوليد شبكات السيول، والحسابات الهيدروليكية الدقيقة لمصافي الأمطار.",
+        "lbl.role": "الدور والمسؤولية",
+        "lbl.tools": "البرمجيات والأدوات",
+        "lbl.impact": "الأثر والقيمة الهندسية",
+        "lbl.deliverables": "المخرجات المسلّمة",
+        "projects.label": "سجل المشروعات",
+        "projects.heading": "خبرات تفصيلية في كبرى المشروعات الهندسية",
+        "projects.intro": "كل بطاقة تُلخص الدور الهندسي، والأدوات المستخدمة، والمخرجات المسلّمة، والأثر المحقق على أرض الواقع.",
+        "proj.1.loc": "جدة، المملكة العربية السعودية",
+        "proj.1.tag": "شبكات تصريف وسيول",
+        "proj.1.t": "مشروعات شبكات تصريف الأمطار وخفض منسوب المياه الجوفية",
+        "proj.1.role": "<strong>الدور:</strong> إعداد وتوصيف ونمذجة الشبكات عبر InfraWizard وGIS وCAD.",
+        "proj.1.tools": "<strong>الأدوات:</strong> InfraWizard، ArcGIS، AutoCAD، Civil 3D، Excel.",
+        "proj.1.del": "<strong>المخرجات:</strong> ملفات Shapefile، لوحات CAD، قطاعات طولية Profiles، ملفات KML، خرائط PDF، جداول حصر وملخصات الشبكة.",
+        "proj.1.res": "<strong>النتيجة:</strong> دعم خطط الطوارئ وحلول التصريف العاجلة وتحديد المسارات البديلة لعدة مناطق تخطيطية معتمدة بأمانة جدة.",
+        "proj.2.loc": "جدة، المملكة العربية السعودية",
+        "proj.2.tag": "مراكز تجارية كبرى",
+        "proj.2.t": "شبكة تصريف مياه الأمطار لمشروع مول الجوهرة",
+        "proj.2.role": "<strong>الدور:</strong> إعداد المخططات الهندسية وتوصيف شبكة تصريف الأمطار الداخلية والخارجية.",
+        "proj.2.tools": "<strong>الأدوات:</strong> InfraWizard، GIS، AutoCAD، Excel.",
+        "proj.2.del": "<strong>المخرجات:</strong> غرف التفتيش، ومصافي الأمطار، وحساب أقطار المواسير، والميول، ومناسيب القاع، والأعماق، والإحداثيات، ومواسير الفائض، والجداول الفنية.",
+        "proj.2.res": "<strong>النتيجة:</strong> تجهيز مستندات ومخططات تصريف جاهزة للاعتماد والمراجعة الهندسية الفورية.",
+        "proj.3.loc": "جدة، المملكة العربية السعودية",
+        "proj.3.tag": "رفع مساحي وبنية تحتية",
+        "proj.3.t": "مشروع حصر وتوثيق شبكات المياه الجوفية (2022)",
+        "proj.3.role": "<strong>الدور:</strong> بناء قواعد بيانات GIS/CAD وتحويل بيانات الرفع المساحي الميداني إلى طبقات هندسية.",
+        "proj.3.tools": "<strong>الأدوات:</strong> ArcGIS، AutoCAD، Civil 3D، Excel.",
+        "proj.3.del": "<strong>المخرجات:</strong> قواعد بيانات GIS/CAD مهيكلة، استخراج المخططات الأفقية، والقطاعات الطولية للمناسيب الممسوحة.",
+        "proj.3.res": "<strong>النتيجة:</strong> تحويل آلاف النقاط المساحية العشوائية إلى شبكة هندسية رقمية مترابطة سهلة التحليل والمطابقة.",
+        "proj.4.loc": "أمانة محافظة جدة",
+        "proj.4.tag": "مخططات عمرانية معتمدة",
+        "proj.4.t": "شبكات تصريف مياه الأمطار لمخططات أمانة جدة (2023)",
+        "proj.4.role": "<strong>الدور:</strong> رسم ونمذجة الشبكات وتوفير الدعم الجغرافي GIS لعشرات المخططات التخطيطية.",
+        "proj.4.plans": "<strong>المخططات المنجزة:</strong> 583/ج/س، 654/ج/س، 677/ج/س، 679/ج/س، 680/ج/س، 681/ج/س، 682/ج/س، 683/ج/س، 704/ج/س، 705/ج/س، 718/ج/س.",
+        "proj.4.del": "<strong>المخرجات:</strong> مخططات تنفيذية، طبقات GIS معتمدة، مخرجات فحص وتدقيق، وخرائط هندسية شاملة.",
+        "proj.4.res": "<strong>النتيجة:</strong> إنجاز وتوثيق شبكات تصريف السيول والأمطار بنجاح ضمن الجداول الزمنية المحددة لأمانة جدة.",
+        "proj.5.loc": "جدة، المملكة العربية السعودية",
+        "proj.5.tag": "خفض مياه جوفية ونزح",
+        "proj.5.t": "أنظمة خفض منسوب المياه الجوفية والنزح السطحي",
+        "proj.5.role": "<strong>الدور:</strong> إعداد المخططات والمسارات ودعم الـ GIS لمشروعات النزح السطحي وخفض المياه.",
+        "proj.5.districts": "<strong>الأحياء المستهدفة:</strong> الرويس، الحمراء، الخالدية، العزيزية، الأصالة، وغيرها من المناطق ذات المنسوب المرتفع.",
+        "proj.5.del": "<strong>المخرجات:</strong> مخططات CAD/GIS، دراسات مسارات خطوط الطرد والتصريف، وخرائط مراقبة مناسيب المياه الجوفية.",
+        "proj.5.res": "<strong>النتيجة:</strong> تقديم حلول نزح وتصريف فعالة للمناطق السكنية والتجارية الحيوية لحماية المنشآت القائمة.",
+        "proj.6.loc": "الرياض، المملكة العربية السعودية",
+        "proj.6.tag": "درء أخطار السيول",
+        "proj.6.t": "مشروع الحماية من أخطار السيول لوادي لبن",
+        "proj.6.role": "<strong>الدور:</strong> إعداد الخرائط الهيدرولوجية، والرسم الهندسي، والتوثيق الفني لأعمال الحماية.",
+        "proj.6.tools": "<strong>الأدوات:</strong> GIS، AutoCAD، سير عمل اللوحات والقطاعات الفنية.",
+        "proj.6.del": "<strong>المخرجات:</strong> خرائط نطاقات الغمر والحماية من السيول، لوحات هندسية، وتقارير توثيقية معتمدة.",
+        "proj.6.res": "<strong>النتيجة:</strong> دعم مراجعة وتوثيق أعمال الحماية الهيدرولوجية وقنوات تصريف السيول بالوادي.",
+        "proj.7.loc": "جدة، المملكة العربية السعودية",
+        "proj.7.tag": "تحويل CAD إلى GIS",
+        "proj.7.t": "تحويل المخططات الكهربائية وشبكات المرافق من CAD إلى GIS",
+        "proj.7.role": "<strong>الدور:</strong> المعالجة والتحويل الرقمي لشبكات ومخططات الكهرباء من ملفات CAD إلى قواعد بيانات GIS.",
+        "proj.7.plans": "<strong>المخططات المستهدفة:</strong> مخطط 675، ومخطط 679، ومخطط 680.",
+        "proj.7.del": "<strong>المخرجات:</strong> قواعد بيانات جغرافية Geodatabases مهيكلة، وطبقات مرافق مدققة طبولوجياً.",
+        "proj.7.res": "<strong>النتيجة:</strong> تحويل الرسومات الورقية والمخططات التقليدية إلى أصول جغرافية رقمية ذكية تدعم إدارة المرافق.",
+        "proj.8.loc": "الساحل الشمالي، جمهورية مصر العربية",
+        "proj.8.tag": "إدارة ساحلية وتغير مناخي",
+        "proj.8.t": "خطة الإدارة المتكاملة للمناطق الساحلية المقاومة للمناخ (ICZM 2023)",
+        "proj.8.role": "<strong>الدور:</strong> تقديم الدعم الجغرافي وإنتاج الخرائط المتقدمة لتوثيق وإدارة المنطقة الساحلية.",
+        "proj.8.tools": "<strong>الأدوات:</strong> ArcGIS، أدوات إنتاج الخرائط، والتحليل المكاني للبيانات البيئية.",
+        "proj.8.del": "<strong>المخرجات:</strong> أطالس وخرائط تفصيلية للساحل الشمالي المصري تدعم خطط التكيف مع التغيرات المناخية.",
+        "proj.8.res": "<strong>النتيجة:</strong> المساهمة في إعداد المخرجات المكانية المعتمدة لاستراتيجية حماية السواحل المصرية.",
+        "tools.label": "تطوير البرمجيات والأتمتة",
+        "tools.heading": "أدوات برمجية وحزم أتمتة مبتكرة (إصدارات 2026)",
+        "tools.intro": "حزم برمجية وأدوات أتمتة طوّرتها خصيصاً لحل المشكلات المتكررة وتجاوز عقبات نقل البيانات والتحويل بين CAD وGIS وإعداد شبكات السيول وطباعة اللوحات.",
+        "tool.1.kicker": "تطبيق خرائط",
+        "tool.1.t": "Atlas of Egyptian Curriculums Maps App",
+        "tool.1.p1": "تطبيق تفاعلي متكامل لخرائط وأطالس المناهج التعليمية المصرية وتسهيل استعراض واستخراج الخرائط.",
+        "tool.1.p2": "<strong>نوع الأداة:</strong> تطبيق خرائط تفاعلي (Maps App)",
+        "tool.1.p3": "<strong>الحالة:</strong> نسخة معاينة خاصة (Private Preview)",
+        "tool.2.kicker": "أداة ويندوز",
+        "tool.2.t": "DropAndCopy",
+        "tool.2.p1": "أداة ذكية لإدارة الملفات لتسريع عمليات السحب والإفلات والنسخ المنظم أثناء أرشفة المشروعات الكبرى.",
+        "tool.2.p2": "<strong>نوع الأداة:</strong> أداة ويندوز خفيفة وسريعة (Desktop Utility)",
+        "tool.2.p3": "<strong>الحالة:</strong> أداة سير عمل مستقرة ومعتمدة",
+        "tool.3.kicker": "مستودعات بيانات GIS",
+        "tool.3.t": "GIS Data Repositories Professional 2026",
+        "tool.3.p1": "هيكل تنظيمي احترافي لمستودعات بيانات الـ GIS لتوحيد المعايير وتنظيم الطبقات بمشاريع البنية التحتية.",
+        "tool.3.p2": "<strong>نوع الأداة:</strong> نظام وهيكلية لتنظيم البيانات الجغرافية",
+        "tool.3.p3": "<strong>الحالة:</strong> حزمة إصدار عام 2026",
+        "tool.4.kicker": "أتمتة مواسير",
+        "tool.4.t": "Qtra Pipe Auto Run",
+        "tool.4.p1": "أداة أتمتة متقدمة لمعالجة وتصنيف وتوليد حسابات أقطار ومسارات المواسير وتقليل العمل اليدوي.",
+        "tool.4.p2": "<strong>نوع الأداة:</strong> أداة أتمتة شبكات البنية التحتية",
+        "tool.4.p3": "<strong>الحالة:</strong> نسخة معاينة خاصة (Private Preview)",
+        "tool.5.kicker": "أتمتة نقل الملفات",
+        "tool.5.t": "RoboTransfer",
+        "tool.5.p1": "أداة لنقل ومزامنة ملفات المشروعات ومخرجات الخرائط الضخمة بين مسارات العمل ومحطات التحليل بسلاسة.",
+        "tool.5.p2": "<strong>نوع الأداة:</strong> أداة أتمتة ونقل ملفات ذكية",
+        "tool.5.p3": "<strong>الحالة:</strong> أداة سير عمل مستقرة ومعتمدة",
+        "tool.6.kicker": "أتمتة طباعة PDF",
+        "tool.6.t": "Smart Plot PDF",
+        "tool.6.p1": "أداة ذكية لتسريع طباعة وتصدير الخرائط والمخططات الهندسية بدقة عالية وبأحجام قياسية جاهزة للتسليم.",
+        "tool.6.p2": "<strong>نوع الأداة:</strong> أداة مساعدة للطباعة والتصدير",
+        "tool.6.p3": "<strong>الحالة:</strong> قيد التطوير والتحديث المستمر",
+        "tool.7.kicker": "حاسبة هندسية",
+        "tool.7.t": "SmartCalculator",
+        "tool.7.p1": "حاسبة فنية متخصصة لمعالجة الحسابات الهيدروليكية والمساحية والتحويلات الرقمية المتكررة لبيانات الشبكات.",
+        "tool.7.p2": "<strong>نوع الأداة:</strong> آلة حاسبة هندسية ومساحية متخصصة",
+        "tool.7.p3": "<strong>الحالة:</strong> نسخة معاينة خاصة (Private Preview)",
+        "tool.8.kicker": "مصافي أمطار",
+        "tool.8.t": "SmartGully",
+        "tool.8.p1": "أداة مبتكرة مخصصة لحسابات وتوصيف مصافي الأمطار (Catch Basins / Gullies) وإعداد مخرجات جاهزة للتقارير.",
+        "tool.8.p2": "<strong>المميزات:</strong> تدقيق الحسابات، دعم الربط الهيدروليكي، ومخرجات تقارير فورية.",
+        "tool.8.p3": "<strong>الحالة:</strong> نسخة معاينة خاصة وتطوير نشط",
+        "tool.9.kicker": "صندوق أدوات v1.8",
+        "tool.9.t": "Text File to Storm Network Shapefile Toolbox v1.8",
+        "tool.9.p1": "صندوق أدوات متكامل لتحويل بيانات شبكات الأمطار المحفوظة في ملفات نصية (TXT / CSV) مباشرة إلى ملفات Shapefile جاهزة.",
+        "tool.9.p2": "<strong>نوع الأداة:</strong> صندوق أدوات GIS مخصص (Toolbox)",
+        "tool.9.p3": "<strong>الحالة:</strong> الإصدار 1.8 المعتمد",
+        "exp.label": "الخبرات والمنهجية الفنية",
+        "exp.heading": "سير عمل هندسي دقيق من المسح الميداني حتى الاعتماد",
+        "exp.intro": "تحكم شامل في مراحل إعداد الشبكات عبر أدوات InfraWizard، ومخرجات النمذجة، والتحقق من الجودة، والتحويل بين CAD وGIS.",
+        "exp.1.kicker": "InfraWizard",
+        "exp.1.t": "بناء وتوصيف شبكات تصريف الأمطار والمياه الجوفية",
+        "exp.1.p": "بناء الشبكات يدوياً وتهيئة مواصفات المطابق والمواسير، واستخراج القطاعات الطولية (Profiles)، وتلوين الشبكة بحسب الأقطار، وتجهيز اللوحات، والتعامل الاحترافي مع قيود البرنامج.",
+        "exp.2.kicker": "الرفع المساحي",
+        "exp.2.t": "سير عمل التحويل من بيانات المسح إلى شبكات هيدروليكية",
+        "exp.2.p": "تحويل مناسيب الرفع المساحي الميداني والإحداثيات ومناسيب الأرض الطبيعية ومناسيب القاع (Invert Levels) والأعماق إلى نماذج شبكات مهيكلة ودقيقة.",
+        "exp.3.kicker": "النمذجة الهيدروليكية",
+        "exp.3.t": "معالجة وتجهيز مخرجات SewerGEMS و StormCAD",
+        "exp.3.p": "استخراج وتدقيق جداول FlexTables، وتنظيف الحقول، وفصل أقطار ومواد المواسير، وتجهيز ملفات Shapefile متوافقة هندسياً للاستيراد السلس داخل InfraWizard.",
+        "exp.4.kicker": "ضبط الجودة QA/QC",
+        "exp.4.t": "مراجعة الشبكات وتدقيق الميول والمناسيب",
+        "exp.4.p": "كشف وتصحيح الميول السالبة (Negative Slopes)، وتدقيق توافق مناسيب القاع مع مناسيب السطح، والتحقق من أقطار المواسير، وتسمية العناصر، ومتطلبات الحماية والردم.",
+        "exp.5.kicker": "المخرجات المتكاملة",
+        "exp.5.t": "إعداد حزم مخرجات GIS و CAD و KML و PDF",
+        "exp.5.p": "إعداد قواعد البيانات الجغرافية (Geodatabases)، وملفات Shapefiles، ورسومات CAD، وملفات KML، ولوحات PDF التنفيذية، وجداول الحصر والملخصات للاستشاريين والعملاء.",
+        "exp.6.kicker": "توليد الأسطح",
+        "exp.6.t": "إعداد وتوليد أسطح الطرق ونماذج الارتفاع (DEM/TIF)",
+        "exp.6.p": "بناء الأسطح الطبوغرافية من نقاط الرفع المساحي ومناسيب محاور الطرق وحوافها، وتوليد راستر TIF لاستخدامه في Civil 3D وSewerGEMS وStormCAD ونماذج المحاكاة.",
+        "experience.label": "المسار المهني",
+        "experience.heading": "سجل الخبرة الوظيفية والاستشارية",
+        "work.1.date": "أكتوبر 2021 - ديسمبر 2024",
+        "work.1.t": "أخصائي نظم معلومات جغرافية وأخصائي رسم هيدرولوجي",
+        "work.1.co": "شركة أبعاد الرؤية للاستشارات الهندسية (Vision Dimensions)",
+        "work.1.li1": "بناء وتجهيز شبكات تصريف مياه الأمطار وخفض منسوب المياه الجوفية باستخدام InfraWizard بناءً على بيانات المسح، وأقطار ومواد المواسير، ومناسيب الأرض الطبيعية ومناسيب القاع، والمحددات الهندسية.",
+        "work.1.li2": "التحويل الرقمي لرسومات CAD ومخرجات الرفع المساحي الميداني وصادرات النماذج الهيدروليكية إلى مجموعات بيانات GIS مهيكلة وملفات Shapefiles وقواعد بيانات جغرافية وملفات KML ولوحات PDF تنفيذية.",
+        "work.1.li3": "تجهيز بيانات جاهزة للاستيراد ببرنامج InfraWizard من مخرجات SewerGEMS / StormCAD، بما يشمل استخراج FlexTables، وتنظيف الحقول، وفصل الأقطار والمواد ومعالجة الـ Shapefiles.",
+        "work.1.li4": "المراجعة الهندسية وتدقيق ضبط الجودة لشبكات الأمطار والمياه الجوفية لكشف الميول السالبة وتوافق الأعماق وملاءمة أقطار المواسير وتوحيد التسميات ومعايير الإخراج الفني.",
+        "work.1.li5": "إعداد المخططات الهندسية والقطاعات الطولية (Profiles) وجداول ملخصات الشبكة ولوحات العرض ومخرجات الخرائط للحلول العاجلة والمسارات البديلة ومشاريع التحكم في المياه الجوفية بجدة.",
+        "work.1.li6": "توليد أسطح الطرق ومخرجات الراستر (TIF) من بيانات النقاط ومناسيب محاور الطرق لدعم النمذجة الهيدروليكية وسير عمل Civil 3D وGIS.",
+        "work.1.li7": "دعم إعداد التقارير الهيدرولوجية والدراسات الفنية عبر جمع البيانات المكانية والتحليل الهيدرولوجي وإنتاج الخرائط الاحترافية.",
+        "work.2.date": "يناير 2020 - أكتوبر 2021",
+        "work.2.t": "أخصائي نظم معلومات جغرافية وبنية تحتية مستقل",
+        "work.2.co": "مشروعات استشارية حرة ومستقلة",
+        "work.2.li1": "تقديم الدعم الجغرافي والخرائطي لمشاريع شبكات البنية التحتية المتنوعة بما يشمل شبكات الكهرباء والغاز والصرف الصحي وشبكات المرافق العامة.",
+        "work.2.li2": "إعداد وتصميم الخرائط والمخرجات المكانية لرسائل الماجستير والدكتوراه والأبحاث العلمية المحكّمة والأطالس الجغرافية المعتمدة رسمياً.",
+        "work.2.li3": "تقديم دورات وورش عمل تدريبية متخصصة في نظم المعلومات الجغرافية والاستشعار عن بعد والتحليل الطبوغرافي ونمذجة التضاريس.",
+        "pub.label": "المؤلفات والأطالس العلمية المعتمدة",
+        "pub.heading": "إسهامات علمية ومؤلفات جغرافية مسجلة رسمياً",
+        "pub.li1": "<strong>أطلس مصر والعالم العربي والعالم:</strong> تأليف أحمد إبراهيم - مسجَّل بدار الكتب والوثائق القومية المصرية برقم إيداع محلي 2021/20535 وترقيم دولي معتمد (ISBN 9789779095615).",
+        "pub.li2": "<strong>أطلس العالم والعالم العربي:</strong> تأليف أحمد إبراهيم - مسجَّل بدار الكتب والوثائق القومية المصرية برقم إيداع محلي 2022/15361 وترقيم دولي معتمد (ISBN 9789779425962).",
+        "pub.li3": "<strong>أطلس جغرافية مصر:</strong> تأليف أحمد إبراهيم - مسجَّل بدار الكتب والوثائق القومية المصرية برقم إيداع محلي 2022/15362 وترقيم دولي معتمد (ISBN 9789779425979).",
+        "pub.li4": "<strong>أطلس جغرافية التنمية:</strong> تأليف أحمد إبراهيم - مسجَّل بدار الكتب والوثائق القومية المصرية برقم إيداع محلي 2022/15363 وترقيم دولي معتمد (ISBN 9789779425986).",
+        "pub.li5": "<strong>أطلس الجغرافيا السياسية:</strong> تأليف أحمد إبراهيم - مسجَّل بدار الكتب والوثائق القومية المصرية برقم إيداع محلي 2022/15364 وترقيم دولي معتمد (ISBN 9789779425993).",
+        "pub.li6": "<strong>أطلس الخرائط الصماء:</strong> تأليف أحمد إبراهيم - مسجَّل بدار الكتب والوثائق القومية المصرية برقم إيداع محلي 2022/15365 وترقيم دولي معتمد (ISBN 9789779426006).",
+        "pub.li7": "<strong>مراجعة أطلس العالم (إصدار 2020):</strong> مراجعة وتدقيق المادة الخرائطية من إنتاج دار الإرشاد - فرع القاهرة.",
+        "pub.li8": "<strong>أطلس دول حوض النيل (الجانب الجيولوجي):</strong> المشاركة في إنتاج وإعداد الأطلس بشعبة الخرائط ونظم المعلومات الجغرافية، قسم الجغرافيا، كلية الآداب، جامعة القاهرة (2018).",
+        "pub.li9": "<strong>إعداد خرائط الأبحاث الأكاديمية:</strong> تصميم وإعداد الخرائط العلمية المحكّمة لعشرات رسائل الماجستير والدكتوراه والأبحاث الجغرافية والتخطيطية.",
+        "pub.li10": "<strong>تدريب كوادر الـ GIS:</strong> خبرة ممتدة في تقديم دورات تدريبية عملية في تطبيقات GIS المتقدمة والاستشعار عن بعد وإنتاج الخرائط الرقمية.",
+        "pub.li11": "<strong>محاضرات التحليل الطبوغرافي الرقمي (2021):</strong> تقديم ورش عمل متقدمة عبر الإنترنت حول خرائط اتجاه الميل (Aspect)، وخشونة السطح (Roughness)، والارتفاع النسبي، وتظليل التضاريس ثلاثي الأبعاد.",
+        "edu.label": "المؤهلات الأكاديمية",
+        "edu.heading": "ليسانس آداب في الجغرافيا، شعبة الخرائط ونظم المعلومات الجغرافية",
+        "edu.school": "كلية الآداب، جامعة القاهرة | دور مايو 2018",
+        "train.label": "الدورات والشهادات التخصصية المعتمدة",
+        "train.li1": "<strong>دورة التخطيط ونظم المعلومات الجغرافية:</strong> معتمدة من الهيئة العامة للتخطيط العمراني (GOPP) | 1 مايو 2024 - 30 أغسطس 2024.",
+        "train.li2": "<strong>دبلومة الجيوماتكس:</strong> مركز البحوث والتدريب، جامعة عين شمس | 10 يوليو 2017 - 17 أغسطس 2017.",
+        "train.li3": "<strong>دورة مقدمة في الاستشعار عن بعد:</strong> الهيئة القومية للاستشعار عن بعد وعلوم الفضاء (NARSS) | 21 - 25 أغسطس 2016.",
+        "train.li4": "<strong>دورة المساحة الميدانية والأجهزة المساحية:</strong> المركز الأفريقي لخدمات المساحة (ACSS) | أغسطس 2016.",
+        "lang.h": "اللغات",
+        "lang.p1": "<strong>اللغة العربية:</strong> اللغة الأم (إتقان تام وصياغة فنية وهندسية متقدمة).",
+        "lang.p2": "<strong>اللغة الإنجليزية:</strong> مستوى تقني ممتاز لبيئة العمل (Technical Working Proficiency) - إتقان كامل للمصطلحات الهندسية، وقراءة وتطبيق وثائق برمجيات GIS وCAD، والتعامل مع المخططات والبيانات الإقليمية والدولية.",
+        "contact.label": "التواصل والتعاقدات",
+        "contact.heading": "هل تحتاج دعماً هندسياً أو استشارياً في الـ GIS أو شبكات تصريف السيول؟",
+        "contact.intro": "متاح للتعاقدات الاستشارية والمشاريع الهندسية: إعداد مخرجات الـ GIS للبنية التحتية، بناء شبكات InfraWizard، التحويل من CAD إلى GIS، حلول تصريف السيول وخفض المياه الجوفية، وإنشاء أدوات الأتمتة المخصصة.",
+        "contact.whatsapp": "محادثة فورية على واتساب (+20 111 191 5925)",
+        "contact.email": "إرسال بريد إلكتروني مباشر",
+        "contact.linkedin": "حساب لينكد إن (LinkedIn)",
+        "contact.github": "مستودع جيت هاب (GitHub)",
+        "contact.phone": "اتصال هاتفي مباشر (+20 111 191 5925 / +20 107 061 9064)",
+        "footer.text": "© 2026 أحمد إبراهيم. متخصص نظم المعلومات الجغرافية للبنية التحتية وشبكات تصريف مياه الأمطار والسيول."
+}
+      };
+
+      var EN_TITLE = document.title;
+      var EN_DESC = (document.querySelector('meta[name="description"]') || {}).content || '';
+
+      var elCache = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]')).map(function (el) {
+        return { el: el, key: el.getAttribute('data-i18n'), en: el.innerHTML };
+      });
+      var ariaCache = Array.prototype.slice.call(document.querySelectorAll('[data-i18n-aria-label]')).map(function (el) {
+        return { el: el, key: el.getAttribute('data-i18n-aria-label'), en: el.getAttribute('aria-label') };
+      });
+
       var body = document.body;
       var toggle = document.querySelector('.menu-toggle');
-      var nav = document.getElementById('primary-nav');
+      var langButtons = Array.prototype.slice.call(document.querySelectorAll('.lang-btn'));
+      var currentLang = 'en';
+
+      function menuLabel(lang, open) {
+        if (lang === 'ar') return open ? 'إغلاق قائمة التنقل' : 'فتح قائمة التنقل';
+        return open ? 'Close navigation menu' : 'Open navigation menu';
+      }
 
       function isOpen() {
         return body.classList.contains('nav-open');
@@ -403,47 +1131,97 @@
         body.classList.toggle('nav-open', state);
         if (toggle) {
           toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
-          toggle.setAttribute('aria-label', state ? 'Close navigation menu' : 'Open navigation menu');
+          toggle.setAttribute('aria-label', menuLabel(currentLang, state));
         }
       }
 
+      function applyLang(lang) {
+        currentLang = lang === 'ar' ? 'ar' : 'en';
+        var dict = I18N.ar;
+
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+        elCache.forEach(function (item) {
+          var value = currentLang === 'ar' && dict[item.key] != null ? dict[item.key] : item.en;
+          item.el.innerHTML = value;
+        });
+
+        ariaCache.forEach(function (item) {
+          var value = currentLang === 'ar' && dict[item.key] != null ? dict[item.key] : item.en;
+          if (value != null) item.el.setAttribute('aria-label', value);
+        });
+
+        document.title = currentLang === 'ar' && dict['doc.title'] ? dict['doc.title'] : EN_TITLE;
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute('content', currentLang === 'ar' && dict['doc.desc'] ? dict['doc.desc'] : EN_DESC);
+        }
+
+        langButtons.forEach(function (btn) {
+          btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === currentLang ? 'true' : 'false');
+        });
+
+        if (toggle) toggle.setAttribute('aria-label', menuLabel(currentLang, isOpen()));
+
+        try { localStorage.setItem('portfolio-lang', currentLang); } catch (e) {}
+      }
+
+      langButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var lang = btn.getAttribute('data-lang');
+          if (lang !== currentLang) setOpen(false);
+          applyLang(lang);
+        });
+      });
+
+      /* ---------- Mobile Navigation ---------- */
       if (toggle) {
         toggle.addEventListener('click', function () {
           setOpen(!isOpen());
         });
       }
 
-      /* close the mobile menu after choosing a destination */
-      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener('click', function () {
-          if (isOpen()) setOpen(false);
+      var nav = document.getElementById('primary-nav');
+      if (nav) {
+        nav.addEventListener('click', function (e) {
+          if (e.target && e.target.nodeName === 'A') setOpen(false);
         });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen()) setOpen(false);
       });
 
-      /* Escape closes the menu and returns focus to the button */
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && isOpen()) {
-          setOpen(false);
-          if (toggle) toggle.focus();
-        }
-      });
-
-      /* so does a click outside the panel */
-      document.addEventListener('click', function (event) {
+      document.addEventListener('click', function (e) {
         if (!isOpen()) return;
-        if (nav && nav.contains(event.target)) return;
-        if (toggle && toggle.contains(event.target)) return;
-        setOpen(false);
+        var inNav = nav && nav.contains(e.target);
+        var inToggle = toggle && toggle.contains(e.target);
+        if (!inNav && !inToggle) setOpen(false);
       });
 
-      /* the menu only exists in the mobile layout; drop the state when leaving it */
-      if (window.matchMedia) {
-        var wide = window.matchMedia('(min-width: 921px)');
-        var onChange = function (event) {
-          if (event.matches) setOpen(false);
-        };
-        if (wide.addEventListener) wide.addEventListener('change', onChange);
-        else if (wide.addListener) wide.addListener(onChange);
+      /* ---------- Back to Top Button ---------- */
+      var backBtn = document.getElementById('backToTop');
+      if (backBtn) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 400) {
+            backBtn.classList.add('visible');
+          } else {
+            backBtn.classList.remove('visible');
+          }
+        }, { passive: true });
+
+        backBtn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* Hydrate language choice on initial load */
+      try {
+        var initial = localStorage.getItem('portfolio-lang') || 'en';
+        applyLang(initial);
+      } catch (e) {
+        applyLang('en');
       }
     })();
   </script>
