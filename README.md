@@ -73,8 +73,19 @@ Start-Process index.html
 
 ## 📬 Contact & Inquiries / التواصل والاستشارات
 
-- **WhatsApp**: [+20 111 191 5925](https://wa.me/201111915925)
+- **WhatsApp**: [Open WhatsApp Chat](https://wa.me/201111915925)
 - **Email**: [ahmadibrahim.geo@gmail.com](mailto:ahmadibrahim.geo@gmail.com)
 - **LinkedIn**: [linkedin.com/in/ahmadibrahim4geo](https://linkedin.com/in/ahmadibrahim4geo)
 - **GitHub**: [github.com/ahmadibrahim4geo](https://github.com/ahmadibrahim4geo)
-- **Phone**: +20 111 191 5925 / +20 107 061 9064
+- **Contact**: WhatsApp chat via the link above (phone not shown publicly)
+
+
+## October 2026: GIS and software portfolio refresh
+
+The bilingual website now includes a standalone open-source project section with direct links to 13 self-authored public GitHub repositories (GIS tools, mobile apps, cartographic resources, and Windows utilities). The existing infrastructure project experience, publications, training, and nine legacy tools remain in place. The headline also preserves the Hydrological Draftsman profession. Individual repository READMEs remain the source for release status.
+
+**CV asset note:** The website's downloadable original CV PDF/DOCX files have not yet been replaced by the newer complete local Word revision; the published download must be updated separately before claiming it matches the new text.
+
+
+## Public contact privacy & page design
+The public webpage shows WhatsApp, email, LinkedIn and GitHub as icon-only contact controls, with readable accessible labels. Only the primary WhatsApp number remains in the `wa.me` URL for functionality. The secondary phone number and public phone call button are removed from the webpage. Responsive spacing, cards and contact presentation were refined while keeping the existing colors and full CV content.
