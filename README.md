@@ -78,3 +78,10 @@ Start-Process index.html
 - **LinkedIn**: [linkedin.com/in/ahmadibrahim4geo](https://linkedin.com/in/ahmadibrahim4geo)
 - **GitHub**: [github.com/ahmadibrahim4geo](https://github.com/ahmadibrahim4geo)
 - **Phone**: +20 111 191 5925 / +20 107 061 9064
+
+
+## October 2026: GIS and software portfolio refresh
+
+The bilingual website now includes a standalone open-source project section with direct links to 13 self-authored public GitHub repositories (GIS tools, mobile apps, cartographic resources, and Windows utilities). The existing infrastructure project experience, publications, training, and nine legacy tools remain in place. The headline also preserves the Hydrological Draftsman profession. Individual repository READMEs remain the source for release status.
+
+**CV asset note:** The website's downloadable original CV PDF/DOCX files have not yet been replaced by the newer complete local Word revision; the published download must be updated separately before claiming it matches the new text.
