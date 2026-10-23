@@ -1637,3 +1637,10 @@ footer {
   h3 { font-size: 11pt; color: #000; }
   p, li, dd { color: #1e293b; }
 }
+
+/* Portfolio 2026: public repository project cards */
+.open-source-card {min-height:240px;}
+.source-repo-link {display:inline-flex;gap:6px;align-items:center;color:var(--sky);font-size:.88rem;font-weight:700;text-decoration:none;margin-top:auto;padding-top:12px;}
+.source-repo-link:hover {color:var(--text-main);text-decoration:underline;text-underline-offset:4px;}
+.open-source-foot {margin-top:22px;}
+@media print {.source-repo-link,.open-source-foot{display:none!important}}
