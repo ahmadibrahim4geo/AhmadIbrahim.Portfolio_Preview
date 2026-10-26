@@ -1,6 +1,10 @@
 # Ahmad Ibrahim | Portfolio & CV Preview
 ### ملف الأعمال والسيرة الذاتية التفاعلية للمهندس/ أحمد إبراهيم طلبة خضر
 
+**Quick access / وصول مباشر:** [Live bilingual portfolio · البورتفوليو](https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/) · [View CV in browser (PDF) · عرض السيرة الذاتية](https://ahmadibrahim4geo.github.io/AhmadIbrahim.Portfolio_Preview/assets/Ahmad_Ibrahim_CV_Final_Improved.pdf) · [GitHub profile · الملف الشخصي](https://github.com/ahmadibrahim4geo)
+
+**Published CV note / تنويه:** The linked PDF is the CV currently checked into this repository; the newer local Word revision mentioned below has **not** been published here. لا يُفترض أن النسخة المنشورة هي آخر تعديل للسيرة الذاتية دون تحديث ملف PDF نفسه. The site header now opens the PDF in a browser tab instead of forcing a download.
+
 > **Infrastructure GIS & Stormwater Network Specialist | GOPP Certified Expert Assistant**  
 > **أخصائي نظم المعلومات الجغرافية للبنية التحتية وشبكات تصريف مياه الأمطار والسيول | مساعد خبير معتمد بالهيئة العامة للتخطيط العمراني (GOPP)**
 
