@@ -1693,3 +1693,7 @@ footer {
   [dir="rtl"] .floating-whatsapp { left:16px; }
 }
 @media print { .floating-whatsapp, .hero-whatsapp-icon, .contact-links { display:none!important; } }
+
+.brand-mark { overflow: hidden; background: #fff; box-shadow: none; padding: 0; }
+.brand-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.brand:hover .brand-mark { box-shadow: none; }
